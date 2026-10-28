@@ -39,9 +39,11 @@ namespace KHSave.SaveEditor.Persona5.ViewModels
                     case MessageBoxResult.Yes:
                         predicate = x => true;
                         break;
+
                     case MessageBoxResult.No:
                         predicate = x => !x.IsEnabled;
                         break;
+
                     default:
                         return;
                 }

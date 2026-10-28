@@ -1,57 +1,57 @@
-﻿<UserControl x:Class="KHSave.SaveEditor.Kh3.MainView"
+<UserControl x:Class="KHSave.SaveEditor.Kh3.MainView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:KHSave.SaveEditor.Kh3"
              xmlns:views="clr-namespace:KHSave.SaveEditor.Kh3.Views"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="350" d:DesignWidth="400">
     <TabControl>
         <TabItem Header="System">
             <views:SystemView
                     Grid.Row="1"
-                    DataContext="{Binding KhSystem}"/>
+                    DataContext="{Binding KhSystem}" />
         </TabItem>
         <TabItem Header="Inventory">
             <views:InventoryView
                     Grid.Row="1"
-                    DataContext="{Binding Inventory}"/>
+                    DataContext="{Binding Inventory}" />
         </TabItem>
         <TabItem Header="Materials">
             <views:MaterialsView
                     Grid.Row="1"
-                    DataContext="{Binding Materials}"/>
+                    DataContext="{Binding Materials}" />
         </TabItem>
         <TabItem Header="Characters">
             <views:PlayersView
                     Grid.Row="1"
-                    DataContext="{Binding Players}"/>
+                    DataContext="{Binding Players}" />
         </TabItem>
         <TabItem Header="Party">
             <views:PartyView
                     Grid.Row="1"
-                    DataContext="{Binding Party}"/>
+                    DataContext="{Binding Party}" />
         </TabItem>
         <TabItem Header="Story">
             <views:StoryView
                     Grid.Row="1"
-                    DataContext="{Binding Story}"/>
+                    DataContext="{Binding Story}" />
         </TabItem>
         <TabItem Header="Shortcuts">
             <views:ShortcutsView
                     Grid.Row="1"
-                    DataContext="{Binding Shortcuts}"/>
+                    DataContext="{Binding Shortcuts}" />
         </TabItem>
         <TabItem Header="Records">
             <views:RecordsView
                     Grid.Row="1"
-                    DataContext="{Binding Records}"/>
+                    DataContext="{Binding Records}" />
         </TabItem>
         <TabItem Header="Photos">
             <views:PhotosView
                     Grid.Row="1"
-                    DataContext="{Binding Photos}"/>
+                    DataContext="{Binding Photos}" />
         </TabItem>
     </TabControl>
 </UserControl>

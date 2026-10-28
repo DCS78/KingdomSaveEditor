@@ -5,8 +5,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/Xe.Tools.Wpf;component/Themes/Generic.xaml"/>
-                <ResourceDictionary Source="StyledControls.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Xe.Tools.Wpf;component/Themes/Generic.xaml" />
+                <ResourceDictionary Source="StyledControls.xaml" />
                 <ResourceDictionary>
                     <DrawingImage x:Key="FundIcon">
                         <DrawingImage.Drawing>

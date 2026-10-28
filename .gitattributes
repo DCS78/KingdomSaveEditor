@@ -1,2 +1,2 @@
-*.sln    text merge=union
+*.slnx    text merge=union
 *.csproj text merge=union

@@ -1,15 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net6</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Xe.BinaryMapper" Version="1.5.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\KHSave\KHSave.csproj" />
-  </ItemGroup>
-
+    <PropertyGroup>
+        <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Xe.BinaryMapper" Version="1.5.2" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\KHSave\KHSave.csproj" />
+    </ItemGroup>
 </Project>

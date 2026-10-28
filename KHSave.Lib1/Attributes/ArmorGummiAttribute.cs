@@ -1,8 +1,3 @@
-using KHSave.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace KHSave.Lib1.Attributes
 {
     public class ArmorGummiAttribute : GummiBlockAttribute
@@ -11,7 +6,6 @@ namespace KHSave.Lib1.Attributes
             int price = 0, int sell = 0, string description = null) : base(info, sizeX, sizeY, sizeZ,
                 armor, max, price, sell, description)
         {
-
         }
     }
 }

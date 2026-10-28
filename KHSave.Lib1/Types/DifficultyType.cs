@@ -7,6 +7,7 @@ namespace KHSave.Lib1.Types
         [Info("Normal")] Normal,
         [Info("Expert")] Expert
     }
+
     public enum DifficultyFm : byte
     {
         [Info("Final Mix: Beginner Mode")] Beginner,

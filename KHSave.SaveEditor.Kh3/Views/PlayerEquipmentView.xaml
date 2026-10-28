@@ -1,27 +1,27 @@
-﻿<UserControl x:Class="KHSave.SaveEditor.Kh3.Views.PlayerEquipmentView"
+<UserControl x:Class="KHSave.SaveEditor.Kh3.Views.PlayerEquipmentView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:KHSave.SaveEditor.Kh3.Views"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="400" d:DesignWidth="300">
     <StackPanel>
-        <TextBlock Text="Weapons"/>
-        <local:EquipmentItemEntryView DataContext="{Binding Weapon1}"/>
-        <local:EquipmentItemEntryView DataContext="{Binding Weapon2}"/>
-        <local:EquipmentItemEntryView DataContext="{Binding Weapon3}"/>
+        <TextBlock Text="Weapons" />
+        <local:EquipmentItemEntryView DataContext="{Binding Weapon1}" />
+        <local:EquipmentItemEntryView DataContext="{Binding Weapon2}" />
+        <local:EquipmentItemEntryView DataContext="{Binding Weapon3}" />
 
-        <TextBlock Text="Armors"/>
+        <TextBlock Text="Armors" />
         <local:EquipmentItemsView Margin="0 0 0 5"
-            DataContext="{Binding Armors}"/>
+            DataContext="{Binding Armors}" />
 
-        <TextBlock Text="Accessories"/>
+        <TextBlock Text="Accessories" />
         <local:EquipmentItemsView Margin="0 0 0 5"
-            DataContext="{Binding Accessories}"/>
+            DataContext="{Binding Accessories}" />
 
-        <TextBlock Text="Items"/>
+        <TextBlock Text="Items" />
         <local:EquipmentItemsView Margin="0 0 0 5"
-            DataContext="{Binding Consumables}"/>
+            DataContext="{Binding Consumables}" />
     </StackPanel>
 </UserControl>

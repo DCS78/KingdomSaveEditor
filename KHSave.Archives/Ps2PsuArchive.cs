@@ -15,10 +15,10 @@ namespace KHSave.Archives
         {
             [Data] public uint Mode { get; set; }
             [Data] public uint Length { get; set; }
-            [Data] public sceMcStDateTime Created { get; set; }
+            [Data] public SceMcStDateTime Created { get; set; }
             [Data] public uint Cluster { get; set; }
             [Data] public uint DirIndex { get; set; }
-            [Data] public sceMcStDateTime Modified { get; set; }
+            [Data] public SceMcStDateTime Modified { get; set; }
             [Data] public uint Attr { get; set; }
             [Data(Count = 28)] public byte[] Padding { get; set; }
             [Data(Count = 32)] public string Name { get; set; }
@@ -31,7 +31,7 @@ namespace KHSave.Archives
             public DateTime DateModified { get => Map(Modified); set => throw new NotImplementedException(); }
             public int FlagModified { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-            private static DateTime Map(sceMcStDateTime date) => new(date.Year, date.Month, date.Day, date.Hour, date.Min, date.Sec);
+            private static DateTime Map(SceMcStDateTime date) => new(date.Year, date.Month, date.Day, date.Hour, date.Min, date.Sec);
         }
 
         internal Ps2PsuArchive(int entryCount)
@@ -50,7 +50,7 @@ namespace KHSave.Archives
             {
                 var file = BinaryMapping.ReadObject<Entry>(stream);
                 file.Data = new byte[file.Length];
-                stream.Read(file.Data, 0, (int)file.Length);
+                stream.ReadExactly(file.Data);
 
                 var offset_shift = file.Length % Alignment;
                 var pos2 = offset_shift > 0 ? stream.Position + Alignment - offset_shift : stream.Position;
@@ -76,7 +76,7 @@ namespace KHSave.Archives
             new Ps2PsuArchive(stream, entryCount);
     }
 
-    public class sceMcStDateTime
+    public class SceMcStDateTime
     {
         [Data] public byte Resv2 { get; set; }
         [Data] public byte Sec { get; set; }

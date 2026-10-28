@@ -67,7 +67,6 @@ namespace KHSave.SaveEditor.Kh2.ViewModels
         public DriveFormsViewModel(IEnumerable<DriveFormViewModel> list) :
             base(list)
         {
-
         }
 
         public Visibility Visible => IsItemSelected ? Visibility.Visible : Visibility.Collapsed;

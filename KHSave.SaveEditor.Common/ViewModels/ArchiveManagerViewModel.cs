@@ -44,7 +44,7 @@ namespace KHSave.SaveEditor.Common.ViewModels
                     using (var stream = File.OpenRead(fileName))
                     {
                         var data = new byte[stream.Length];
-                        stream.Read(data, 0, data.Length);
+                        stream.ReadExactly(data);
                         selectedEntry.ImportData(data);
                     }
 
@@ -72,12 +72,10 @@ namespace KHSave.SaveEditor.Common.ViewModels
 
             CopyCommand = new RelayCommand(o =>
             {
-
             }, o => IsSelected);
 
             PasteCommand = new RelayCommand(o =>
             {
-
             }, o => IsSelected);
 
             RenameCommand = new RelayCommand(o =>
@@ -123,6 +121,7 @@ namespace KHSave.SaveEditor.Common.ViewModels
                 OnPropertyChanged(nameof(DeleteCommand));
             }
         }
+
         public IArchiveEntry SelectedEntry => SelectedValue?.ArchiveEntry;
         private bool IsSelected => SelectedValue != null;
         private bool IsSelectedEmpty => SelectedValue?.IsEmpty ?? true;

@@ -55,6 +55,7 @@ namespace KHSave.SaveEditor.Ff7Remake.Models
 
         public string Name => InfoAttribute.GetInfo((CharacterType)_characterIndex);
         public string TextCoordinates => $"POS({PosX:F0}, {PosY:F0}, {PosZ:F0})";
+
         public CharacterStatusType Status
         { get => _chapter.CharacterStatus[_characterIndex]; set => _chapter.CharacterStatus[_characterIndex] = value; }
 

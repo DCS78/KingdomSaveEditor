@@ -9,9 +9,11 @@ namespace KHSave.LibPersona5
     public interface ISavePersona5
     {
         bool IsRoyal { get; }
+
         //string ProtagonistLastName { get; set; }
         //string ProtagonistFirstName { get; set; }
         int Money { get; set; }
+
         bool PartyModifierRyuji { get; set; }
         bool PartyModifierMorgana { get; set; }
         bool PartyModifierAnn { get; set; }
@@ -55,6 +57,7 @@ namespace KHSave.LibPersona5
             {
                 case Persona5Identifier:
                     return stream.Length == 192 * 1024;
+
                 case Persona5RoyalIdentifier:
                     return stream.Length == 256 * 1024;
             }
@@ -67,8 +70,10 @@ namespace KHSave.LibPersona5
             {
                 case Persona5Identifier:
                     return Mapper.ReadObject<Persona5Vanilla>(stream.SetPosition(0));
+
                 case Persona5RoyalIdentifier:
                     return Mapper.ReadObject<Persona5Royal>(stream.SetPosition(0));
+
                 default:
                     throw new NotImplementedException("The version has been recognized but it is not supported.");
             }

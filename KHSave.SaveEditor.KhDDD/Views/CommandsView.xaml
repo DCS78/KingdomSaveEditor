@@ -1,16 +1,16 @@
 <UserControl x:Class="KHSave.SaveEditor.KhDDD.Views.CommandsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:KHSave.SaveEditor.KhDDD.Views"
              xmlns:common="clr-namespace:KHSave.SaveEditor.Common.Controls;assembly=KHSave.SaveEditor.Common"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="400">
     <Grid DataContext="{Binding}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <DataGrid
             ItemsSource="{Binding Items}"
@@ -31,7 +31,7 @@
                                             <Image
                                                 Margin="0 0 3 0"
                                                 Width="16" Height="16"
-                                                Source="{Binding Icon}"/>
+                                                Source="{Binding Icon}" />
                                             <TextBlock Text="{Binding Name}" />
                                         </StackPanel>
                                     </DataTemplate>
@@ -40,10 +40,10 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                
+
                 <DataGridTextColumn
                     Header="Amount" Width="3*"
-                    Binding="{Binding Count, UpdateSourceTrigger=PropertyChanged}"/>
+                    Binding="{Binding Count, UpdateSourceTrigger=PropertyChanged}" />
 
                 <DataGridTemplateColumn Header="Sora decks equip" Width="4*">
                     <DataGridTemplateColumn.CellTemplate>
@@ -68,19 +68,18 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                
             </DataGrid.Columns>
         </DataGrid>
         <Grid Grid.Row="1" Margin="0 5 5 5">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="5"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Image Grid.Column="0"
-                Source="{StaticResource Search_16x}"/>
+                Source="{StaticResource Search_16x}" />
             <TextBox Grid.Column="2"
-                Text="{Binding SearchTerm, UpdateSourceTrigger=PropertyChanged}"/>
+                Text="{Binding SearchTerm, UpdateSourceTrigger=PropertyChanged}" />
         </Grid>
     </Grid>
 </UserControl>

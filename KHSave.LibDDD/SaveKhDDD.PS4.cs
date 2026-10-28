@@ -1,8 +1,8 @@
+using KHSave.LibDDD.Model;
 using KHSave.LibDDD.Types;
 using System;
 using System.IO;
 using Xe.BinaryMapper;
-using KHSave.LibDDD.Model;
 
 namespace KHSave.LibDDD
 {
@@ -19,6 +19,7 @@ namespace KHSave.LibDDD
             [Data] public byte RoomId { get; set; }
             [Data] public byte SpawnId { get; set; }
             [Data(0x98)] public uint GameTime { get; set; }
+
             //3 in party and 99 on the bank
             [Data(0x53a0, Count = 102)] public DreamEater[] DreamEaters { get; set; }
 
@@ -26,16 +27,21 @@ namespace KHSave.LibDDD
 
             //SoraXp max value 786680?
             [Data(0xd1f0)] public uint SoraXp { get; set; }
+
             [Data(0xd204)] public ushort SoraDroplets { get; set; }
             [Data(0xd214)] public byte SoraLv { get; set; }
+
             //RikuXp max value 786680?
             [Data(0xd26c)] public uint RikuXp { get; set; }
+
             [Data(0xd280)] public ushort RikuDroplets { get; set; }
             [Data(0xd290)] public byte RikuLv { get; set; }
             [Data(0xd2e8)] public EquipmentType SoraKeyblade { get; set; }
             [Data(0xd2ea)] public EquipmentType RikuKeyblade { get; set; }
+
             //Munny max value 999999?
             [Data(0xd2ec)] public uint Munny { get; set; }
+
             [Data(0xd314, Count = 3)] public DeckPS4[] SoraDecks { get; set; }
             [Data(0xd620, Count = 3)] public DeckPS4[] RikuDecks { get; set; }
 

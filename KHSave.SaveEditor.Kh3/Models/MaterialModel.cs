@@ -38,6 +38,7 @@ namespace KHSave.SaveEditor.Kh3.Models
         public MaterialType MaterialType => (MaterialType)index;
 
         public override string Name => InfoAttribute.GetInfo(MaterialType);
+
         public int Count
         {
             get => save.MaterialsCount[index];

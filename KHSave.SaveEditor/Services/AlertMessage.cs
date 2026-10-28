@@ -42,14 +42,19 @@ namespace KHSave.SaveEditor.Services
             {
                 case MessageBoxResult.None:
                     return null;
+
                 case MessageBoxResult.OK:
                     return true;
+
                 case MessageBoxResult.Cancel:
                     return null;
+
                 case MessageBoxResult.Yes:
                     return true;
+
                 case MessageBoxResult.No:
                     return false;
+
                 default:
                     return null;
             }

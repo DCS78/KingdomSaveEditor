@@ -13,6 +13,7 @@ namespace KHSave.Lib2
         public const uint MagicCodeEu = 0x4532484b;
 
         public const int WorldCount = 19;
+
         public static readonly string[] WorldNames = Enum
             .GetValues(typeof(WorldType))
             .Cast<WorldType>()

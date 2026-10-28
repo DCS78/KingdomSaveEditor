@@ -17,7 +17,8 @@
 */
 
 using KHSave.Attributes;
-using KHSave.SaveEditor.Common;
+using KHSave.Lib3;
+using KHSave.Lib3.Presets;
 using KHSave.Lib3.Types;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,8 +27,6 @@ using Xe.Tools;
 using Xe.Tools.Models;
 using Xe.Tools.Wpf.Commands;
 using Xe.Tools.Wpf.Models;
-using KHSave.Lib3;
-using KHSave.Lib3.Presets;
 
 namespace KHSave.SaveEditor.Kh3.ViewModels
 {
@@ -41,7 +40,6 @@ namespace KHSave.SaveEditor.Kh3.ViewModels
         public StoryViewModel(List<int> storyflags) :
             base(storyflags.Select((_, index) => new StoryEntryModel(storyflags, index)))
         {
-
         }
 
         protected override StoryEntryModel OnNewItem()

@@ -7,6 +7,7 @@ namespace KHSave.SaveEditor.Kh2.Service
         uint Count { get; set; }
 
         EquipmentType GetEquipment(uint index);
+
         void SetEquipment(uint index, EquipmentType equipment);
     }
 }

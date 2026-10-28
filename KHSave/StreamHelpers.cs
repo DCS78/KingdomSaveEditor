@@ -50,7 +50,7 @@ namespace KHSave
         public static byte[] ReadBytes(this Stream stream, int length)
         {
             var data = new byte[length];
-            stream.Read(data, 0, length);
+            stream.ReadExactly(data);
             return data;
         }
 

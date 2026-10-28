@@ -18,12 +18,11 @@ namespace KHSave.SaveEditor.Common
         private static extern bool ReadProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, [Out] byte[] lpBuffer, int dwSize, out int BytesRead);
 
         [DllImport("kernel32.dll")]
-        static extern bool WriteProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, byte[] lpBuffer, int dwSize, out int lpNumberOfBytesWritten);
+        private static extern bool WriteProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, byte[] lpBuffer, int dwSize, out int lpNumberOfBytesWritten);
 
         [DllImport("advapi32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool OpenProcessToken(IntPtr ProcessHandle, UInt32 DesiredAccess, out IntPtr TokenHandle);
-
+        private static extern bool OpenProcessToken(IntPtr ProcessHandle, UInt32 DesiredAccess, out IntPtr TokenHandle);
 
         private Process _process;
         private IntPtr _hProcess;
@@ -36,7 +35,6 @@ namespace KHSave.SaveEditor.Common
 
             OpenProcess(process);
         }
-
 
         public long BaseAddress { get; }
         public override bool CanRead => true;
@@ -85,10 +83,13 @@ namespace KHSave.SaveEditor.Common
             {
                 case SeekOrigin.Begin:
                     return Position = offset;
+
                 case SeekOrigin.Current:
                     return Position += offset;
+
                 case SeekOrigin.End:
                     return Position = Length + offset;
+
                 default:
                     return Position;
             }

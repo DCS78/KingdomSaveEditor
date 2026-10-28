@@ -13,8 +13,8 @@
     </Window.Resources>
     <Grid Margin="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <ListBox
@@ -26,12 +26,12 @@
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="10"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="10" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="{Binding DisplayDate}"/>
-                        <TextBlock Grid.Column="2" Text="{Binding FileName}"/>
+                        <TextBlock Grid.Column="0" Text="{Binding DisplayDate}" />
+                        <TextBlock Grid.Column="2" Text="{Binding FileName}" />
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -44,39 +44,39 @@
                 Margin="{StaticResource ButtonMargin}"
                 Width="{StaticResource ButtonWidth}"
                 Content="_Open"
-                Command="{Binding OpenCommand}"/>
+                Command="{Binding OpenCommand}" />
             <Button
                 Margin="{StaticResource ButtonMargin}"
                 Width="{StaticResource ButtonWidth}"
                 Content="_Import"
-                Command="{Binding ImportCommand}"/>
+                Command="{Binding ImportCommand}" />
             <Button
                 Margin="{StaticResource ButtonMargin}"
                 Width="{StaticResource ButtonWidth}"
                 Content="_Export"
-                Command="{Binding ExportCommand}"/>
+                Command="{Binding ExportCommand}" />
             <Button
                 Visibility="Collapsed"
                 Margin="{StaticResource ButtonMargin}"
                 Width="{StaticResource ButtonWidth}"
                 Content="_Copy"
-                Command="{Binding CopyCommand}"/>
+                Command="{Binding CopyCommand}" />
             <Button
                 Visibility="Collapsed"
                 Margin="{StaticResource ButtonMargin}"
                 Width="{StaticResource ButtonWidth}"
                 Content="_Paste"
-                Command="{Binding PasteCommand}"/>
+                Command="{Binding PasteCommand}" />
             <Button
                 Margin="{StaticResource ButtonMargin}"
                 Width="{StaticResource ButtonWidth}"
                 Content="_Rename"
-                Command="{Binding RenameCommand}"/>
+                Command="{Binding RenameCommand}" />
             <Button
                 Margin="{StaticResource ButtonMargin}"
                 Width="{StaticResource ButtonWidth}"
                 Content="_Delete"
-                Command="{Binding DeleteCommand}"/>
+                Command="{Binding DeleteCommand}" />
         </StackPanel>
     </Grid>
 </Window>

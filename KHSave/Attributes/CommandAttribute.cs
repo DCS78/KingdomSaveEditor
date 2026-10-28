@@ -23,7 +23,6 @@ namespace KHSave.Attributes
         public CommandAttribute(string name = null) :
             base(name)
         {
-
         }
     }
 }

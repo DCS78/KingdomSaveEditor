@@ -1,5 +1,4 @@
 using KHSave.Lib1.Types;
-using System;
 using Xe.BinaryMapper;
 
 namespace KHSave.Lib1.Models
@@ -8,8 +7,10 @@ namespace KHSave.Lib1.Models
     {
         //0xYX with Y and X having a value between 0-9, A-F will place the block outside the editor
         [Data] public byte BlockPositionYX { get; set; }
+
         //Range 0-9
         [Data] public byte BlockPositionZ { get; set; }
+
         [Data] public byte Unknown2 { get; set; }
         [Data] public byte Unknown3 { get; set; }
         [Data] public GummiBlocksType BlockID { get; set; }

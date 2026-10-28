@@ -65,15 +65,29 @@ namespace KHSave.SaveEditor.Ff7Remake.Models
 
         public string Name => ToString();
 
-        public int Index { get => _chapterObject.Index; set { _chapterObject.Index = value; OnPropertyChanged(nameof(Name)); } }
+        public int Index
+        { get => _chapterObject.Index; set { _chapterObject.Index = value; OnPropertyChanged(nameof(Name)); } }
 
-        public float Unknown04 { get => _chapterObject.Unknown04; set { _chapterObject.Unknown04 = value; OnPropertyChanged((nameof(Name))); } }
-        public int Unknown08 { get => _chapterObject.Unknown08; set { _chapterObject.Unknown08 = value; OnPropertyChanged((nameof(Name))); } }
-        public float Unknown0c { get => _chapterObject.Unknown0c; set { _chapterObject.Unknown0c = value; OnPropertyChanged((nameof(Name))); } }
-        public float PositionX { get => _chapterObject.PositionX; set { _chapterObject.PositionX = value; OnPropertyChanged((nameof(Name))); } }
-        public float PositionY { get => _chapterObject.PositionY; set { _chapterObject.PositionY = value; OnPropertyChanged((nameof(Name))); } }
-        public float PositionZ { get => _chapterObject.PositionZ; set { _chapterObject.PositionZ = value; OnPropertyChanged((nameof(Name))); } }
-        public float Rotation { get => _chapterObject.Rotation; set { _chapterObject.Rotation = value; OnPropertyChanged((nameof(Name))); } }
+        public float Unknown04
+        { get => _chapterObject.Unknown04; set { _chapterObject.Unknown04 = value; OnPropertyChanged((nameof(Name))); } }
+
+        public int Unknown08
+        { get => _chapterObject.Unknown08; set { _chapterObject.Unknown08 = value; OnPropertyChanged((nameof(Name))); } }
+
+        public float Unknown0c
+        { get => _chapterObject.Unknown0c; set { _chapterObject.Unknown0c = value; OnPropertyChanged((nameof(Name))); } }
+
+        public float PositionX
+        { get => _chapterObject.PositionX; set { _chapterObject.PositionX = value; OnPropertyChanged((nameof(Name))); } }
+
+        public float PositionY
+        { get => _chapterObject.PositionY; set { _chapterObject.PositionY = value; OnPropertyChanged((nameof(Name))); } }
+
+        public float PositionZ
+        { get => _chapterObject.PositionZ; set { _chapterObject.PositionZ = value; OnPropertyChanged((nameof(Name))); } }
+
+        public float Rotation
+        { get => _chapterObject.Rotation; set { _chapterObject.Rotation = value; OnPropertyChanged((nameof(Name))); } }
 
         public override string ToString() => _chapterObject.ToString();
     }

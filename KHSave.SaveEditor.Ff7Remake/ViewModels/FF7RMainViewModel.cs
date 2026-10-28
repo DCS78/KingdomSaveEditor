@@ -44,6 +44,7 @@ namespace KHSave.SaveEditor.Ff7Remake.ViewModels
 
         public Visibility SimpleVisibility => Common.Global.IsAdvancedMode ? Visibility.Collapsed : Visibility.Visible;
         public Visibility AdvancedVisibility => Common.Global.IsAdvancedMode ? Visibility.Visible : Visibility.Collapsed;
+
         public string CurrentTabId
         {
             get => Common.Global.LastFF7RTab ?? DefaultTab;

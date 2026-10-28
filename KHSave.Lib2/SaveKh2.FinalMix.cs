@@ -23,8 +23,10 @@ namespace KHSave.Lib2
             [Data] public byte Unused0f { get; set; }
             [Data(0x10, Count = 64 * 19, Stride = 6)] public PlaceScriptFinalMix[] PlaceScripts { get; set; }
             [Data(0x1c90, Count = 20, Stride = 0x20)] public Progress[] StoryProgress { get; set; }
+
             // 3e8 of what?
             [Data(0x22f8, Count = 8 * Constants.WorldCount)] public byte[] RoomVisitedFlag { get; set; } // There might be a chance that it starts from 0x2300
+
             [Data(0x2440)] public int MunnyAmount { get; set; }
             [Data(0x2444, Count = Constants.WorldCount + 2)] public int Timer { get; set; }
             [Data(0x2498)] public Difficulty Difficulty { get; set; }

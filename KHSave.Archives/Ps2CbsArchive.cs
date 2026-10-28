@@ -18,18 +18,19 @@ namespace KHSave.Archives
             [Data] public uint DecompressedSize { get; set; }
             [Data] public uint CompressedSize { get; set; }
             [Data(Count = 32)] public string Name { get; set; }
-            [Data] public sceMcStDateTime Created { get; set; }
-            [Data] public sceMcStDateTime Modified { get; set; }
+            [Data] public SceMcStDateTime Created { get; set; }
+            [Data] public SceMcStDateTime Modified { get; set; }
             [Data] public uint Unk2 { get; set; }
             [Data] public uint Mode { get; set; }
             [Data(Count = 16)] public byte[] Unk3 { get; set; }
             [Data(Count = 72)] public string Title { get; set; }
             [Data(Count = 132)] public string Description { get; set; }
         }
+
         public class Entry : IArchiveEntry
         {
-            [Data] public sceMcStDateTime Created { get; set; }
-            [Data] public sceMcStDateTime Modified { get; set; }
+            [Data] public SceMcStDateTime Created { get; set; }
+            [Data] public SceMcStDateTime Modified { get; set; }
             [Data] public uint Length { get; set; }
             [Data] public uint Mode { get; set; }
             [Data(Count = 8)] public byte[] Unk1 { get; set; }
@@ -41,7 +42,7 @@ namespace KHSave.Archives
             public DateTime DateModified { get => Map(Modified); set => throw new NotImplementedException(); }
             public int FlagModified { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-            private static DateTime Map(sceMcStDateTime date) => new(date.Year, date.Month, date.Day, date.Hour, date.Min, date.Sec);
+            private static DateTime Map(SceMcStDateTime date) => new(date.Year, date.Month, date.Day, date.Hour, date.Min, date.Sec);
         }
 
         internal Ps2CbsArchive(int entryCount)
@@ -58,9 +59,9 @@ namespace KHSave.Archives
             var header = BinaryMapping.ReadObject<Header>(stream);
             var len = stream.Length - stream.Position;
             var buff = new byte[len];
-            stream.Read(buff, 0, (int)len);
+            stream.ReadExactly(buff);
 
-            rc4Crypt(buff, (int)len);
+            RC4Crypt(buff, (int)len);
 
             using var decompressedStream = new MemoryStream(Decompress(buff, (int)header.DecompressedSize));
             long offset = 0;
@@ -69,7 +70,7 @@ namespace KHSave.Archives
                 var entry = BinaryMapping.ReadObject<Entry>(decompressedStream);
 
                 entry.Data = new byte[entry.Length];
-                decompressedStream.Read(entry.Data, 0, (int)entry.Length);
+                decompressedStream.ReadExactly(entry.Data);
 
                 offset = decompressedStream.Position;
                 Entries.Add(entry);
@@ -96,12 +97,12 @@ namespace KHSave.Archives
             using var inflater = new InflaterInputStream(compressedStream);
 
             var decomp = new byte[length];
-            inflater.Read(decomp);
+            inflater.ReadExactly(decomp);
 
             return decomp;
         }
 
-        private static void rc4Crypt(byte[] buf, int bufLen)
+        private static void RC4Crypt(byte[] buf, int bufLen)
         {
             byte j = 0;
             byte k = 0;

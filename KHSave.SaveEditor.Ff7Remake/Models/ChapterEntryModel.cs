@@ -16,7 +16,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-using KHSave.LibFf7Remake;
 using KHSave.LibFf7Remake.Chunks;
 using KHSave.LibFf7Remake.Models;
 using KHSave.LibFf7Remake.Types;
@@ -103,7 +102,9 @@ namespace KHSave.SaveEditor.Ff7Remake.Models
         public IEnumerable<BgmModel> BgmList => BgmPreset.Get();
         public bool IsChapterInPlay { get => _chapter.IsChapterInPlay != 0; set => _chapter.IsChapterInPlay = (byte)(value ? 1 : 0); }
         public byte ChapterId { get => _chapter.ChapterId; set => _chapter.ChapterId = value; }
-        public int Bgm { get => _chapter.Bgm; set { _chapter.Bgm = (ushort)value; OnPropertyChanged(); } }
+
+        public int Bgm
+        { get => _chapter.Bgm; set { _chapter.Bgm = (ushort)value; OnPropertyChanged(); } }
 
         public ChapterCharacterEntryModel Entity0 => new ChapterCharacterEntryModel(_chapter, 0);
         public ChapterCharacterEntryModel Entity1 => new ChapterCharacterEntryModel(_chapter, 1);

@@ -18,7 +18,6 @@
 
 using KHSave.Lib3.Models;
 using KHSave.Lib3.Types;
-using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -26,7 +25,6 @@ namespace KHSave.Lib3
 {
     public interface ISaveKh3
     {
-
         int MagicCode { get; set; }
         int FileSize { get; set; }
         short MajorVersion { get; set; }

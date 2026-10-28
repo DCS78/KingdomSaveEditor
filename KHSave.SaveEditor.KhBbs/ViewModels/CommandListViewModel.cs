@@ -19,13 +19,11 @@ namespace KHSave.SaveEditor.KhBbs.ViewModels
         public CommandListViewModel(IEnumerable<Command> list) :
             this(list.Select(x => new CommandViewModel(x)))
         {
-
         }
 
         public CommandListViewModel(IEnumerable<CommandViewModel> list) :
             base(list)
         {
-
         }
     }
 }

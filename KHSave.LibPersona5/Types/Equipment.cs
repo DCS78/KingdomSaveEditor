@@ -4,67 +4,93 @@ namespace KHSave.LibPersona5.Types
 {
     public class EquipmentAttribute : InfoAttribute
     {
-        public EquipmentAttribute(string name = null) : base(name) { }
+        public EquipmentAttribute(string name = null) : base(name)
+        {
+        }
     }
 
     public class DaggerAttribute : EquipmentAttribute
     {
-        public DaggerAttribute(string name = null) : base(name) { }
+        public DaggerAttribute(string name = null) : base(name)
+        {
+        }
     }
 
     public class PoleAttribute : EquipmentAttribute
     {
-        public PoleAttribute(string name = null) : base(name) { }
+        public PoleAttribute(string name = null) : base(name)
+        {
+        }
     }
 
     public class SaberAttribute : EquipmentAttribute
     {
-        public SaberAttribute(string name = null) : base(name) { }
+        public SaberAttribute(string name = null) : base(name)
+        {
+        }
     }
 
     public class RangeAttribute : EquipmentAttribute
     {
-        public RangeAttribute(string name = null) : base(name) { }
+        public RangeAttribute(string name = null) : base(name)
+        {
+        }
     }
 
     public class RangeJokerAttribute : RangeAttribute
     {
-        public RangeJokerAttribute(string name = null) : base(name) { }
+        public RangeJokerAttribute(string name = null) : base(name)
+        {
+        }
     }
 
     public class RangeCrowAttribute : RangeAttribute
     {
-        public RangeCrowAttribute(string name = null) : base(name) { }
+        public RangeCrowAttribute(string name = null) : base(name)
+        {
+        }
     }
 
     public class ProtectorAttribute : EquipmentAttribute
     {
-        public ProtectorAttribute(string name = null) : base(name) { }
+        public ProtectorAttribute(string name = null) : base(name)
+        {
+        }
     }
 
     public class ProtectorMaleAttribute : ProtectorAttribute
     {
-        public ProtectorMaleAttribute(string name = null) : base(name) { }
+        public ProtectorMaleAttribute(string name = null) : base(name)
+        {
+        }
     }
 
     public class ProtectorFemaleAttribute : ProtectorAttribute
     {
-        public ProtectorFemaleAttribute(string name = null) : base(name) { }
+        public ProtectorFemaleAttribute(string name = null) : base(name)
+        {
+        }
     }
 
     public class ProtectorUnisexAttribute : ProtectorAttribute
     {
-        public ProtectorUnisexAttribute(string name = null) : base(name) { }
+        public ProtectorUnisexAttribute(string name = null) : base(name)
+        {
+        }
     }
 
     public class ProtectorCatAttribute : ProtectorAttribute
     {
-        public ProtectorCatAttribute(string name = null) : base(name) { }
+        public ProtectorCatAttribute(string name = null) : base(name)
+        {
+        }
     }
 
     public class OutfitAttribute : EquipmentAttribute
     {
-        public OutfitAttribute(string name = null) : base(name) { }
+        public OutfitAttribute(string name = null) : base(name)
+        {
+        }
     }
 
     public enum Equipment : ushort

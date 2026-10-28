@@ -72,7 +72,7 @@ namespace KHSave.LibPersona3
 
         private enum Flags
         {
-            FemaleProtagonist = 4103,
+            FemaleProtagonist = 4104,
         }
         
         internal static IBinaryMapping Mapper;

@@ -18,7 +18,6 @@
 
 using KHSave.LibFf7Remake.Chunks;
 using KHSave.LibFf7Remake.Models;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

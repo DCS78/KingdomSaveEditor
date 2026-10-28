@@ -54,7 +54,6 @@ namespace KHSave.SaveEditor.Common.Models
     public class GenericListModel<TModel, TValue> : GenericListModel<TModel, string, TValue>
         where TModel : GenericEntryModel<string, TValue>
     {
-
         public GenericListModel(IEnumerable<TModel> items, Func<TValue> valueGetter, Action<TValue> valueSetter) :
             base(items, valueGetter, valueSetter)
         { }

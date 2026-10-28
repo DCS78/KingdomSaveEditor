@@ -36,6 +36,7 @@ namespace KHSave.SaveEditor.Persona5.ViewModels
             "VioletMelee",
             "VioletMelee",
         };
+
         private static readonly string[] RangeType = new string[]
         {
             "RangeJoker",
@@ -71,6 +72,7 @@ namespace KHSave.SaveEditor.Persona5.ViewModels
 
         public Visibility SimpleVisibility => Common.Global.IsAdvancedMode ? Visibility.Collapsed : Visibility.Visible;
         public Visibility AdvancedVisibility => Common.Global.IsAdvancedMode ? Visibility.Visible : Visibility.Collapsed;
+
         public string CurrentTabId
         {
             get => Common.Global.LastPersona5Tab ?? DefaultTab;
@@ -80,6 +82,7 @@ namespace KHSave.SaveEditor.Persona5.ViewModels
         public IEnumerable<PersonaEntryViewModel> PersonaList { get; private set; }
         public IEnumerable<SkillViewModel> SkillList { get; private set; }
         public KhEnumListModel<EnumIconTypeModel<Skill>, Skill> SkillVanillaList { get; } = new KhEnumListModel<EnumIconTypeModel<Skill>, Skill>();
+
         public KhEnumListModel<EnumIconTypeModel<SkillRoyal>, SkillRoyal> SkillRoyalList { get; } =
             new KhEnumListModel<EnumIconTypeModel<SkillRoyal>, SkillRoyal>();
 

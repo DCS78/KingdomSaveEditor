@@ -1,6 +1,5 @@
 using KHSave.LibRecom;
 using KHSave.LibRecom.Types;
-using KHSave.SaveEditor.Common.Models;
 using Xe.Tools.Models;
 
 namespace KHSave.SaveEditor.KhRecom.ViewModels

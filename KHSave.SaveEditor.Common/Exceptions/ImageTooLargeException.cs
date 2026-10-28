@@ -25,7 +25,6 @@ namespace KHSave.SaveEditor.Common.Exceptions
         public ImageTooLargeException(int sizeLimit) :
             base($"The image is too large and it cannot exceed {sizeLimit} bytes.")
         {
-
         }
     }
 }

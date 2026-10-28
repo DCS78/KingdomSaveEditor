@@ -2,7 +2,6 @@ using KHSave.Archives;
 using System;
 using System.IO;
 using System.Text;
-using Xe.BinaryMapper;
 using Xunit;
 
 namespace KHSave.Tests.Saves.Archives
@@ -15,69 +14,69 @@ namespace KHSave.Tests.Saves.Archives
 
         [Fact]
         public void ReadKh1Archive() => OpenKh1File().Using(stream =>
-        {
-            var archive = ArchiveFactories.Ps4Kh1.Read(stream);
+                        {
+                            var archive = ArchiveFactories.Ps4Kh1.Read(stream);
 
-            Assert.Equal(200, archive.Entries.Count);
+                            Assert.Equal(200, archive.Entries.Count);
 
-            var entry1 = archive.Entries[0];
-            Assert.Equal(ExpectedStrForFile1, entry1.Name);
-            Assert.Equal(2002, entry1.DateCreated.Year);
-            Assert.Equal(2013, entry1.DateModified.Year);
-            Assert.Equal(0x111, entry1.Data.Length);
-            Assert.Equal(11, entry1.Data[0]);
+                            var entry1 = archive.Entries[0];
+                            Assert.Equal(ExpectedStrForFile1, entry1.Name);
+                            Assert.Equal(2002, entry1.DateCreated.Year);
+                            Assert.Equal(2013, entry1.DateModified.Year);
+                            Assert.Equal(0x111, entry1.Data.Length);
+                            Assert.Equal(11, entry1.Data[0]);
 
-            var entry2 = archive.Entries[1];
-            Assert.Equal(ExpectedStrForFile2, entry2.Name);
-            Assert.Equal(2005, entry2.DateCreated.Year);
-            Assert.Equal(2014, entry2.DateModified.Year);
-            Assert.Equal(0x222, entry2.Data.Length);
-            Assert.Equal(22, entry2.Data[0]);
+                            var entry2 = archive.Entries[1];
+                            Assert.Equal(ExpectedStrForFile2, entry2.Name);
+                            Assert.Equal(2005, entry2.DateCreated.Year);
+                            Assert.Equal(2014, entry2.DateModified.Year);
+                            Assert.Equal(0x222, entry2.Data.Length);
+                            Assert.Equal(22, entry2.Data[0]);
 
-            var entry3 = archive.Entries[2];
-            Assert.Equal(ExpectedStrForFile3, entry3.Name);
-            Assert.Equal(2019, entry3.DateCreated.Year);
-            Assert.Equal(2019, entry3.DateModified.Year);
-            Assert.Equal(0x333, entry3.Data.Length);
-            Assert.Equal(33, entry3.Data[0]);
-        });
+                            var entry3 = archive.Entries[2];
+                            Assert.Equal(ExpectedStrForFile3, entry3.Name);
+                            Assert.Equal(2019, entry3.DateCreated.Year);
+                            Assert.Equal(2019, entry3.DateModified.Year);
+                            Assert.Equal(0x333, entry3.Data.Length);
+                            Assert.Equal(33, entry3.Data[0]);
+                        });
 
         [Fact]
         public void ReadKh2Archive() => OpenKh2File().Using(stream =>
-        {
-            var archive = ArchiveFactories.Ps4Kh2.Read(stream);
+                        {
+                            var archive = ArchiveFactories.Ps4Kh2.Read(stream);
 
-            Assert.Equal(100, archive.Entries.Count);
+                            Assert.Equal(100, archive.Entries.Count);
 
-            var entry1 = archive.Entries[0];
-            Assert.Equal(ExpectedStrForFile1, entry1.Name);
-            Assert.Equal(2002, entry1.DateCreated.Year);
-            Assert.Equal(2013, entry1.DateModified.Year);
-            Assert.Equal(0x111, entry1.Data.Length);
-            Assert.Equal(11, entry1.Data[0]);
+                            var entry1 = archive.Entries[0];
+                            Assert.Equal(ExpectedStrForFile1, entry1.Name);
+                            Assert.Equal(2002, entry1.DateCreated.Year);
+                            Assert.Equal(2013, entry1.DateModified.Year);
+                            Assert.Equal(0x111, entry1.Data.Length);
+                            Assert.Equal(11, entry1.Data[0]);
 
-            var entry2 = archive.Entries[1];
-            Assert.Equal(ExpectedStrForFile2, entry2.Name);
-            Assert.Equal(2005, entry2.DateCreated.Year);
-            Assert.Equal(2014, entry2.DateModified.Year);
-            Assert.Equal(0x222, entry2.Data.Length);
-            Assert.Equal(22, entry2.Data[0]);
+                            var entry2 = archive.Entries[1];
+                            Assert.Equal(ExpectedStrForFile2, entry2.Name);
+                            Assert.Equal(2005, entry2.DateCreated.Year);
+                            Assert.Equal(2014, entry2.DateModified.Year);
+                            Assert.Equal(0x222, entry2.Data.Length);
+                            Assert.Equal(22, entry2.Data[0]);
 
-            var entry3 = archive.Entries[2];
-            Assert.Equal(ExpectedStrForFile3, entry3.Name);
-            Assert.Equal(2019, entry3.DateCreated.Year);
-            Assert.Equal(2019, entry3.DateModified.Year);
-            Assert.Equal(0x333, entry3.Data.Length);
-            Assert.Equal(33, entry3.Data[0]);
-        });
+                            var entry3 = archive.Entries[2];
+                            Assert.Equal(ExpectedStrForFile3, entry3.Name);
+                            Assert.Equal(2019, entry3.DateCreated.Year);
+                            Assert.Equal(2019, entry3.DateModified.Year);
+                            Assert.Equal(0x333, entry3.Data.Length);
+                            Assert.Equal(33, entry3.Data[0]);
+                        });
 
         [Fact]
         public void WriteBackKh1Archive() => OpenKh2File().Using(expected => Helpers.AssertStream(expected, stream =>
-        {
-            var actual = new MemoryStream();
-            ArchiveFactories.Ps4Kh2.Read(stream).Write(actual);
-            return actual;
-        }));
+                        {
+                            var actual = new MemoryStream();
+                            ArchiveFactories.Ps4Kh2.Read(stream).Write(actual);
+                            return actual;
+                        }));
 
         [Fact]
         public void CreateKh1Archive()

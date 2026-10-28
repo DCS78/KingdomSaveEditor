@@ -33,6 +33,7 @@ namespace KHSave.Lib2
                 case Constants.MagicCodeUs:
                 case Constants.MagicCodeEu:
                     return true;
+
                 default:
                     return false;
             }
@@ -54,6 +55,7 @@ namespace KHSave.Lib2
                 case GameVersion.American:
                 case GameVersion.FinalMix:
                     return (GameVersion)version;
+
                 default:
                     return null;
             }
@@ -71,8 +73,10 @@ namespace KHSave.Lib2
                     throw new NotImplementedException("Japanese save file is not yet supported.");
                 case GameVersion.American:
                     return Read<SaveEuropean>(stream);
+
                 case GameVersion.FinalMix:
                     return Read<SaveFinalMix>(stream);
+
                 case null:
                     throw new NotImplementedException("An invalid version has been specified.");
                 default:
@@ -99,6 +103,7 @@ namespace KHSave.Lib2
         }
 
         private const int CrcPolynomial = 0x04c11db7;
+
         private static uint[] crc_table = GetCrcTable(CrcPolynomial)
                 .Take(0x100)
                 .ToArray();

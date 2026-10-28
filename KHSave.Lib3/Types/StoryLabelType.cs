@@ -1005,6 +1005,7 @@ namespace KHSave.Lib3.Types
         KG_02_EVENT_C_PHASE_02_END = 1400,
         KG_02_EVENT_C_END = 9999,
     }
+
     public enum StoryLabelTypeKgDlc5d
     {
         KG_02_EVENT_D_INIT = 0,
@@ -1019,6 +1020,7 @@ namespace KHSave.Lib3.Types
         KG_02_EVENT_D_PHASE_02_END = 1400,
         KG_02_EVENT_D_END = 9999,
     }
+
     public enum StoryLabelTypeKgDlcCharSelect
     {
         KG_DLC_05_AREA_A_CHARSEL_01 = 0,

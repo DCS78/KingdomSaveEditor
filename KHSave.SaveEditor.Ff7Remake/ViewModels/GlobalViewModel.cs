@@ -41,6 +41,7 @@ namespace KHSave.SaveEditor.Ff7Remake.ViewModels
         public KhEnumListModel<CharacterType> CharacterType { get; }
 
         public CharacterType PlayableCharacter { get => (CharacterType)_save.PlayableCharacter; set => _save.PlayableCharacter = (byte)value; }
+
         public byte CurrentChapter
         {
             get => _save.CurrentChapter;
@@ -52,70 +53,87 @@ namespace KHSave.SaveEditor.Ff7Remake.ViewModels
                         CurrentChapterId = 0;
                         CurrentChapterChunk = CurrentChapterChunk2 = 0;
                         break;
+
                     case 2:
                         CurrentChapterId = 1;
                         CurrentChapterChunk = CurrentChapterChunk2 = 1;
                         break;
+
                     case 3:
                         CurrentChapterId = 2;
                         CurrentChapterChunk = CurrentChapterChunk2 = 2;
                         break;
+
                     case 4:
                         CurrentChapterId = 3;
                         CurrentChapterChunk = CurrentChapterChunk2 = 3;
                         break;
+
                     case 5:
                         CurrentChapterId = 4;
                         CurrentChapterChunk = CurrentChapterChunk2 = 4;
                         break;
+
                     case 6:
                         CurrentChapterId = 5;
                         CurrentChapterChunk = CurrentChapterChunk2 = 5;
                         break;
+
                     case 7:
                         CurrentChapterId = 6;
                         CurrentChapterChunk = CurrentChapterChunk2 = 6;
                         break;
+
                     case 8:
                         CurrentChapterId = 8;
                         CurrentChapterChunk = CurrentChapterChunk2 = 8;
                         break;
+
                     case 9:
                         CurrentChapterId = 8;
                         CurrentChapterChunk = CurrentChapterChunk2 = 8;
                         break;
+
                     case 10:
                         CurrentChapterId = 9;
                         CurrentChapterChunk = CurrentChapterChunk2 = 9;
                         break;
+
                     case 11:
                         CurrentChapterId = 10;
                         CurrentChapterChunk = CurrentChapterChunk2 = 10;
                         break;
+
                     case 12:
                         CurrentChapterId = 11;
                         CurrentChapterChunk = CurrentChapterChunk2 = 2;
                         break;
+
                     case 13:
                         CurrentChapterId = 11;
                         CurrentChapterChunk = CurrentChapterChunk2 = 2;
                         break;
+
                     case 14:
                         CurrentChapterId = 12;
                         CurrentChapterChunk = CurrentChapterChunk2 = 8;
                         break;
+
                     case 15:
                         CurrentChapterId = 15;
                         CurrentChapterChunk = CurrentChapterChunk2 = 15;
                         break;
+
                     case 16:
                         CurrentChapterId = 16;
                         CurrentChapterChunk = CurrentChapterChunk2 = 16;
                         break;
+
                     case 17:
                         CurrentChapterId = 16;
                         CurrentChapterChunk = CurrentChapterChunk2 = 16;
                         break;
+
                     case 18:
                         CurrentChapterId = 16;
                         CurrentChapterChunk = CurrentChapterChunk2 = 16;
@@ -127,6 +145,7 @@ namespace KHSave.SaveEditor.Ff7Remake.ViewModels
                 OnPropertyChanged(nameof(CurrentChapterChunk2));
             }
         }
+
         public byte CurrentChapterId { get => _save.CurrentChapterId; set => _save.CurrentChapterId = value; }
         public byte CurrentChapterChunk { get => _save.CurrentChapterChunk; set => _save.CurrentChapterChunk = value; }
         public byte CurrentChapterChunk2 { get => _save.CurrentChapterChunk2; set => _save.CurrentChapterChunk2 = value; }

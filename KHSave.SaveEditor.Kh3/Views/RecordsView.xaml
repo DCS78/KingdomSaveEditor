@@ -1,10 +1,10 @@
-﻿<UserControl x:Class="KHSave.SaveEditor.Kh3.Views.RecordsView"
+<UserControl x:Class="KHSave.SaveEditor.Kh3.Views.RecordsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:KHSave.SaveEditor.Kh3.Views"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="350" d:DesignWidth="400">
     <TabControl>
         <TabItem Header="Shotlocks">
@@ -16,15 +16,15 @@
                             Header="Name"
                             Width="2*"
                             IsReadOnly="True"
-                            Binding="{Binding Name}"/>
+                            Binding="{Binding Name}" />
                     <DataGridTextColumn
                             Header="High Score"
                             Width="1*"
-                            Binding="{Binding HighScore}"/>
+                            Binding="{Binding HighScore}" />
                     <DataGridTextColumn
                             Header="Total Uses"
                             Width="1*"
-                            Binding="{Binding TotalUses}"/>
+                            Binding="{Binding TotalUses}" />
                 </DataGrid.Columns>
             </DataGrid>
         </TabItem>
@@ -37,15 +37,15 @@
                             Header="Name"
                             Width="2*"
                             IsReadOnly="True"
-                            Binding="{Binding Name}"/>
+                            Binding="{Binding Name}" />
                     <DataGridTextColumn
                             Header="High Score"
                             Width="1*"
-                            Binding="{Binding HighScore}"/>
+                            Binding="{Binding HighScore}" />
                     <DataGridTextColumn
                             Header="Total Uses"
                             Width="1*"
-                            Binding="{Binding TotalUses}"/>
+                            Binding="{Binding TotalUses}" />
                 </DataGrid.Columns>
             </DataGrid>
         </TabItem>
@@ -58,21 +58,21 @@
                             Header="Name"
                             Width="*"
                             IsReadOnly="True"
-                            Binding="{Binding Name}"/>
+                            Binding="{Binding Name}" />
                     <DataGridTextColumn
                             Header="High score"
                             Width="*"
-                            Binding="{Binding HighScore}"/>
+                            Binding="{Binding HighScore}" />
                     <DataGridTextColumn
                             Header="Attempts"
                             Width="*"
-                            Binding="{Binding AttemptCount}"/>
+                            Binding="{Binding AttemptCount}" />
                 </DataGrid.Columns>
             </DataGrid>
         </TabItem>
         <TabItem Header="Minigames">
             <ScrollViewer>
-                <local:RecordMinigamesView/>
+                <local:RecordMinigamesView />
             </ScrollViewer>
         </TabItem>
     </TabControl>

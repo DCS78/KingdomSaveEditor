@@ -1,6 +1,5 @@
 using KHSave.Attributes;
 using KHSave.LibDDD.Attributes;
-using System;
 
 // thank you HOLLOW_DRAGONITE for this list of ID's you made my life a lot easier
 
@@ -441,6 +440,7 @@ namespace KHSave.LibDDD.Types
 
         // xx02 - keyblades
         [Keyblade("Kingdom Key")] KingdomKey = ItemType.Keyblade,
+
         [Keyblade("Skull Noise (Sora)")] SkullNoiseS,
         [Keyblade("Guardian Bell (Sora)")] GuardianBellS,
         [Keyblade("Ferris Gear")] FerrisGear,

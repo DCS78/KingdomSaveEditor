@@ -116,8 +116,10 @@ namespace KHSave.Trssv.Types
         [Info] dw_08_debug_Start_02,
         [Info] dw_08_debug_Start_03,
         [Info] dw_08_debug_Start_04,
+
         // [Info] dw_08_Lv_Save_03,
         [Info] dw_09_Lv_AutoSave_02,
+
         [Info] dw_09_Lv_Retry_01,
         [Info] dw_09_Lv_Save_01,
         [Info] dw_09_Lv_skip_dw025,

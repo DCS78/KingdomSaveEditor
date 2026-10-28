@@ -6,8 +6,6 @@ namespace KHSave.LibDDD
 {
     public partial class SaveKhDDD
     {
-        internal static IBinaryMapping Mapper;
-
         public static bool IsValid(Stream stream)
         {
             var prevPosition = stream.Position;
@@ -18,6 +16,7 @@ namespace KHSave.LibDDD
             {
                 case Constants.MagicCode3DSEu:
                     return true;
+
                 default:
                     return false;
             }
@@ -62,6 +61,7 @@ namespace KHSave.LibDDD
                     throw new NotSupportedException("The version is not supported.");
             }
         }
+
         public static ISaveKhDDD ReadVersion(Stream stream)
         {
             switch (GetFileVersion(stream))

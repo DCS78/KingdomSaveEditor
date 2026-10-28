@@ -1,4 +1,3 @@
-using KHSave.Attributes;
 using KHSave.Lib2.Types;
 using KHSave.SaveEditor.Common.Models;
 using KHSave.SaveEditor.Kh2.Interfaces;
@@ -27,7 +26,6 @@ namespace KHSave.SaveEditor.Kh2.Models
             get => _abilities[_index];
             set => _abilities[_index] = value;
         }
-
 
         public EquipmentType AbilityType
         {

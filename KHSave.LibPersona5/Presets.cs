@@ -22,8 +22,10 @@ namespace KHSave.LibPersona5
 
         private static Field FieldAll(int category, int map, string description) =>
             new Field { Category = category, Map = map, Vanilla = true, Royal = true, Description = description };
+
         private static Field FieldVanilla(int category, int map, string description) =>
             new Field { Category = category, Map = map, Vanilla = true, Royal = false, Description = description };
+
         private static Field FieldRoyal(int category, int map, string description) =>
             new Field { Category = category, Map = map, Vanilla = false, Royal = true, Description = description };
 

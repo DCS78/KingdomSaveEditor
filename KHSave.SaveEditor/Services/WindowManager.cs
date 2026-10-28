@@ -1,7 +1,7 @@
+using KHSave.SaveEditor.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Windows;
-using KHSave.SaveEditor.Interfaces;
 using Unity;
 
 namespace KHSave.SaveEditor.Services
@@ -19,13 +19,13 @@ namespace KHSave.SaveEditor.Services
             get => rootWindow;
             set
             {
+                rootWindow = value;
                 _windowStack = new Stack<Window>();
                 _windowStack.Push(value);
             }
         }
 
         public Window CurrentWindow => _windowStack.Peek();
-
 
         public WindowManager(IUnityContainer container)
         {

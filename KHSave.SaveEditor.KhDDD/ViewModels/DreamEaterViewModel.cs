@@ -15,8 +15,10 @@ namespace KHSave.SaveEditor.KhDDD.ViewModels
             this.dreamEater = dreamEater;
             DreamEaterTypes = new KhEnumListModel<DreamEaterType>();
         }
+
         public DreamEaterType DreamEaterType { get => dreamEater.DreamEaterType; set => dreamEater.DreamEaterType = value; }
         public KhEnumListModel<DreamEaterType> DreamEaterTypes { get; set; }
+
         public string Name
         {
             get => Encoding.GetEncoding(932).GetString(dreamEater.Name);

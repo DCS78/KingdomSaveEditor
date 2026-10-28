@@ -10,7 +10,7 @@ namespace Tooling.MemoryWatcher
 {
     public static class Program
     {
-        async static Task Main(string[] args)
+        private static async Task Main(string[] args)
         {
             var configFileName = Path.GetFullPath(args.FirstOrDefault() ?? "config.yml");
             var configuration = Configuration.ReadFromYaml(configFileName);
@@ -49,7 +49,7 @@ namespace Tooling.MemoryWatcher
             }
         }
 
-        async static Task Run(string configFileName, GameConfiguration game)
+        private static async Task Run(string configFileName, GameConfiguration game)
         {
             var processName = game.Process;
             Console.WriteLine($"Now searching for the process {processName}...");
@@ -79,10 +79,12 @@ namespace Tooling.MemoryWatcher
                         case 'c':
                             Console.Clear();
                             break;
+
                         case 'd':
                             lock (stream)
                                 Dump(stream);
                             break;
+
                         case 'p':
                             isWatchRunning = !isWatchRunning;
                             if (isWatchRunning)
@@ -90,6 +92,7 @@ namespace Tooling.MemoryWatcher
                             else
                                 Console.WriteLine("Memory watcher is now scheduled to take a rest.");
                             break;
+
                         case 'x':
                             isSupposedToExit = true;
                             Console.WriteLine("Memory watcher is now scheduled to exit.");
@@ -108,7 +111,7 @@ namespace Tooling.MemoryWatcher
                 var sb = new StringBuilder(0x1000);
 
                 stream.Position = 0;
-                stream.Read(buffer, 0, (int)length);
+                stream.ReadExactly(buffer);
 
                 while (!isSupposedToExit)
                 {
@@ -117,7 +120,7 @@ namespace Tooling.MemoryWatcher
                     lock (stream)
                     {
                         stream.Position = 0;
-                        stream.Read(current);
+                        stream.ReadExactly(current);
                     }
 
                     if (isWatchRunning)
@@ -138,7 +141,6 @@ namespace Tooling.MemoryWatcher
                     var tmp = buffer; // flip buffer for performance reasons
                     buffer = current;
                     current = tmp;
-
                 }
             });
 
@@ -208,12 +210,12 @@ namespace Tooling.MemoryWatcher
             return null;
         }
 
-        static IEnumerable<int> IgnoreOffset(int offset)
+        private static IEnumerable<int> IgnoreOffset(int offset)
         {
             yield return offset;
         }
 
-        static IEnumerable<int> IgnoreOffset(int startOffset, int count) =>
+        private static IEnumerable<int> IgnoreOffset(int startOffset, int count) =>
             Enumerable.Range(startOffset, count);
     }
 

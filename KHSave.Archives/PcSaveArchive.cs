@@ -27,6 +27,7 @@ namespace KHSave.Archives
             public byte[] Data { get; set; }
 
             private static DateTime Map(int ticks) => new DateTime(ticks * TimeSpan.TicksPerSecond + UnixTimeBase);
+
             private static int Map(DateTime dateTime) => (int)((dateTime.Ticks - UnixTimeBase) / TimeSpan.TicksPerSecond);
         }
 
@@ -56,10 +57,10 @@ namespace KHSave.Archives
             _stride = stride;
 
             _pngHeader = new byte[PngHeaderLength];
-            stream.Read(_pngHeader);
+            stream.ReadExactly(_pngHeader);
 
             var entryData = new byte[entryCount * EntryLength];
-            stream.Read(entryData);
+            stream.ReadExactly(entryData);
 
             _encryptionKey = new byte[KeyLength];
             Array.Copy(entryData, KeyOffset, _encryptionKey, 0, KeyLength);
@@ -75,7 +76,7 @@ namespace KHSave.Archives
             foreach (var entry in Entries.Cast<Entry>())
             {
                 entry.Data = new byte[entry.Length];
-                stream.Read(entry.Data, 0, entry.Length);
+                stream.ReadExactly(entry.Data);
 
                 baseOffset += _stride;
                 stream.Position = baseOffset;
@@ -83,7 +84,7 @@ namespace KHSave.Archives
 
             var remainingByteCount = stream.Length - stream.Position;
             _pngFooter = new byte[remainingByteCount];
-            stream.Read(_pngFooter);
+            stream.ReadExactly(_pngFooter);
         }
 
         public string Name { get; internal set; } = "Kingdom Hearts PC Save Archive";

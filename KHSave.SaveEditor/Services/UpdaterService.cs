@@ -1,9 +1,9 @@
-using System;
-using System.Threading.Tasks;
-using System.Windows;
 using KHSave.SaveEditor.Interfaces;
 using KHSave.SaveEditor.VersionCheck;
 using KHSave.SaveEditor.Views;
+using System;
+using System.Threading.Tasks;
+using System.Windows;
 using Xe.VersionCheck;
 
 namespace KHSave.SaveEditor.Services

@@ -9,7 +9,6 @@ namespace KHSave.SaveEditor.KhBbs.ViewModels
         public DecksViewModel(Deck[] decks, CommandListViewModel commandList) :
             base(decks.Select(x => new DeckViewModel(x, commandList)))
         {
-
         }
     }
 }

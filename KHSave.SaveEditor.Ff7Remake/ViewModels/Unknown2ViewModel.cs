@@ -67,7 +67,10 @@ namespace KHSave.SaveEditor.Ff7Remake.ViewModels
         public byte Unknown01 { get => SelectedValue.Unknown01; set => SelectedValue.Unknown01 = value; }
         public byte Unknown02 { get => SelectedValue.Unknown02; set => SelectedValue.Unknown02 = value; }
         public byte Unknown03 { get => SelectedValue.Unknown03; set => SelectedValue.Unknown03 = value; }
-        public int ItemId { get => SelectedValue.ItemId; set { SelectedValue.ItemId = value; OnPropertyChanged(); } }
+
+        public int ItemId
+        { get => SelectedValue.ItemId; set { SelectedValue.ItemId = value; OnPropertyChanged(); } }
+
         public int Unknown08 { get => SelectedValue.Unknown08; set => SelectedValue.Unknown08 = value; }
         public int Unknown0c { get => SelectedValue.Unknown0c; set => SelectedValue.Unknown0c = value; }
     }

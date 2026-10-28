@@ -5,7 +5,6 @@ using KHSave.LibPersona5.Types;
 using KHSave.SaveEditor.Common.Models;
 using KHSave.SaveEditor.Persona5.Interfaces;
 using KHSave.SaveEditor.Persona5.Models;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
@@ -58,24 +57,34 @@ namespace KHSave.SaveEditor.Persona5.ViewModels
                 {
                     case Characters.Joker:
                         return true;
+
                     case Characters.Skull:
                         return _save.PartyModifierRyuji;
+
                     case Characters.Mona:
                         return _save.PartyModifierMorgana;
+
                     case Characters.Panther:
                         return _save.PartyModifierAnn;
+
                     case Characters.Fox:
                         return _save.PartyModifierYusuke;
+
                     case Characters.Queen:
                         return _save.PartyModifierMakoto;
+
                     case Characters.Noir:
                         return _save.PartyModifierHaru;
+
                     case Characters.Oracle:
                         return _save.PartyModifierFutaba;
+
                     case Characters.Crow:
                         return _save.PartyModifierAkechi;
+
                     case Characters.Violet:
                         return _save.PartyModifierKasumi;
+
                     default:
                         return false;
                 }
@@ -87,24 +96,31 @@ namespace KHSave.SaveEditor.Persona5.ViewModels
                     case Characters.Skull:
                         _save.PartyModifierRyuji = value;
                         break;
+
                     case Characters.Mona:
                         _save.PartyModifierMorgana = value;
                         break;
+
                     case Characters.Panther:
                         _save.PartyModifierAnn = value;
                         break;
+
                     case Characters.Fox:
                         _save.PartyModifierYusuke = value;
                         break;
+
                     case Characters.Queen:
                         _save.PartyModifierMakoto = value;
                         break;
+
                     case Characters.Noir:
                         _save.PartyModifierHaru = value;
                         break;
+
                     case Characters.Oracle:
                         _save.PartyModifierFutaba = value;
                         break;
+
                     case Characters.Crow:
                         _save.PartyModifierAkechi = value;
                         break;

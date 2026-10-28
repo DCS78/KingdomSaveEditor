@@ -33,7 +33,6 @@ namespace KHSave.LibBbs
             [Data(0x5A2C, Count = 0x3)] public Deck[] Decks { get; set; }
 
             [Data(0x5CAC)] public DifficultyType Difficulty { get; set; }
-
         }
     }
 }

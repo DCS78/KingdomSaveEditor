@@ -31,7 +31,6 @@ namespace KHSave.SaveEditor.Ff7Remake.Data
 
         public Location()
         {
-
         }
 
         public Location(int chapter, bool oob, string description, double x, double y, double z)
@@ -58,6 +57,7 @@ namespace KHSave.SaveEditor.Ff7Remake.Data
 
         private static GenericEqualityComparer<Location> _locationEqualityComparer = new GenericEqualityComparer<Location>((x, y) =>
             x.Description == y.Description);
+
         private static List<Location> _offlineData = new List<Location>
         {
             new Location(1, false, "Inside the train station", 5483.766, -8462.45, 6662.088),

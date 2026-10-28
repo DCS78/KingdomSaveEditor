@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>net6-windows</TargetFramework>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>Icon1.ico</ApplicationIcon>
     <OutputType>WinExe</OutputType>
@@ -13,34 +12,32 @@
     <AssemblyVersion>1.15.5</AssemblyVersion>
     <Description>http://kingdomsaveeditor.xee.dev/</Description>
     <Copyright>Copyright (C) 2021 Luciano Ciccariello</Copyright>
-    <RepositoryType></RepositoryType>
-    <PackageTags></PackageTags>
-    <PackageReleaseNotes></PackageReleaseNotes>
+    <RepositoryType>
+    </RepositoryType>
+    <PackageTags>
+    </PackageTags>
+    <PackageReleaseNotes>
+    </PackageReleaseNotes>
     <FileVersion>1.15.5</FileVersion>
     <PackageId>KHSave.SaveEditor</PackageId>
     <Authors>Luciano (Xeeynamo) Ciccariello</Authors>
     <Product>Kingdom Save Editor</Product>
-      
     <PackageLicenseExpression>GPL3</PackageLicenseExpression>
     <ApplicationManifest>App.manifest</ApplicationManifest>
+    <SupportedOSPlatformVersion>10.0.22621.0</SupportedOSPlatformVersion>
   </PropertyGroup>
   <Target Name="_CheckForGenerateAppxPackageOnBuild" />
-
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx" Generator="ResXFileCodeGenerator" LastGenOutput="Resources.Designer.cs" />
     <Compile Update="Properties\Resources.Designer.cs" DesignTime="True" AutoGen="True" DependentUpon="Resources.resx" />
     <Compile Update="Settings.Designer.cs" AutoGen="True" DependentUpon="Settings.settings" />
     <None Update="Settings.settings" LastGenOutput="Settings.Designer.cs" Generator="SettingsSingleFileGenerator" />
-
+    <None Include="..\KHSave.Tests\Saves\kh2fm.bin" Link="Saves\kh2fm.bin" CopyToOutputDirectory="PreserveNewest" Condition="'$(Configuration)' == 'Debug'" />
     <Resource Include="Images\*.*" />
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
-    <PackageReference Include="System.Text.Encoding.CodePages" Version="6.0.0" />
     <PackageReference Include="Unity.Container" Version="5.11.11" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\KHSave.Archives\KHSave.Archives.csproj" />
     <ProjectReference Include="..\KHSave.Lib02\KHSave.Lib02.csproj" />
@@ -68,5 +65,4 @@
     <ProjectReference Include="..\XeEngine.Tools.Public\Xe.Tools.Wpf\Xe.Tools.Wpf.csproj" />
     <ProjectReference Include="..\XeEngine.Tools.Public\Xe.Tools\Xe.Tools.csproj" />
   </ItemGroup>
-
 </Project>

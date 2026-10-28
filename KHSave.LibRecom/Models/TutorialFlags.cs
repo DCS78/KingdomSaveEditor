@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using Xe.BinaryMapper;
 
 namespace KHSave.LibRecom.Models

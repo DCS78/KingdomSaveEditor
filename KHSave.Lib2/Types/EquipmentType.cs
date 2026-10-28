@@ -608,4 +608,3 @@ namespace KHSave.Lib2.Types
         [Shield("Akashic Record+")] AkashicRecordPlus,
     }
 }
-

@@ -76,7 +76,6 @@ namespace KHSave.SaveEditor.Kh3.ViewModels
             Link5 = new ItemComboBoxModel<CommandType>(() => save.Links[4], x => save.Links[4] = x);
         }
 
-
         public ShortcutGroupViewModel Shortcut1 { get; set; }
         public ShortcutGroupViewModel Shortcut2 { get; set; }
         public ShortcutGroupViewModel Shortcut3 { get; set; }
@@ -91,7 +90,5 @@ namespace KHSave.SaveEditor.Kh3.ViewModels
         public ItemComboBoxModel<CommandType> Link3 { get; set; }
         public ItemComboBoxModel<CommandType> Link4 { get; set; }
         public ItemComboBoxModel<CommandType> Link5 { get; set; }
-
-
     }
 }

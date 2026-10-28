@@ -10,6 +10,7 @@ namespace KHSave.SaveEditor.Interfaces
         Window CurrentWindow { get; }
 
         bool? Push<TWindow>(Action<TWindow> onSetup = null, Func<TWindow, bool> onSuccess = null) where TWindow : Window;
+
         bool? Push(Window window);
 
         void Pull();

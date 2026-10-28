@@ -21,7 +21,6 @@ using KHSave.Lib2.Types;
 using KHSave.SaveEditor.Common.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 using Xe.Tools;
 
 namespace KHSave.SaveEditor.Kh2.ViewModels
@@ -57,6 +56,7 @@ namespace KHSave.SaveEditor.Kh2.ViewModels
                 OnPropertyChanged(nameof(Rooms));
             }
         }
+
         public byte RoomId { get => save.RoomId; set => save.RoomId = value; }
         public byte SpawnId { get => save.SpawnId; set => save.SpawnId = value; }
 

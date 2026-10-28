@@ -60,7 +60,6 @@ namespace KHSave.SaveEditor.Ff7Remake.ViewModels
                 if (!successful)
                     throw new FormatException("Not a decimal or hex string");
 
-
                 ChunkId = 0;
                 ChunkOffset = _absoluteOffset;
                 var prevChunkOffset = 0;

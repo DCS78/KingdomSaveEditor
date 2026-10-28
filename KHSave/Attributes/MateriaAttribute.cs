@@ -5,7 +5,6 @@ namespace KHSave.Attributes
         public MateriaAttribute(string name = null) :
             base(name)
         {
-
         }
     }
 
@@ -14,7 +13,6 @@ namespace KHSave.Attributes
         public MagicMateriaAttribute(string name = null) :
             base(name)
         {
-
         }
     }
 
@@ -23,7 +21,6 @@ namespace KHSave.Attributes
         public CommandMateriaAttribute(string name = null) :
             base(name)
         {
-
         }
     }
 
@@ -32,7 +29,6 @@ namespace KHSave.Attributes
         public SupportMateriaAttribute(string name = null) :
             base(name)
         {
-
         }
     }
 
@@ -41,7 +37,6 @@ namespace KHSave.Attributes
         public CompleteMateriaAttribute(string name = null) :
             base(name)
         {
-
         }
     }
 
@@ -50,7 +45,6 @@ namespace KHSave.Attributes
         public SummonMateriaAttribute(string name = null) :
             base(name)
         {
-
         }
     }
 }

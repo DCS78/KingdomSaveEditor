@@ -16,12 +16,11 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-using System;
-using System.Collections.Generic;
-using System.IO;
 using Force.Crc32;
 using KHSave.Lib3.Models;
 using KHSave.Lib3.Types;
+using System.Collections.Generic;
+using System.IO;
 using Xe.BinaryMapper;
 
 namespace KHSave.Lib3
@@ -58,7 +57,9 @@ namespace KHSave.Lib3
         [Data(0x58)] public int Unknown00058 { get; set; }
         [Data(0x5C)] public int Unknown0005C { get; set; }
         [Data(0x60)] public CharacterIconType BaseSaveIcon { get; set; }
-        public CharacterIconType DlcSaveIcon { get => default(CharacterIconType); set { } }
+
+        public CharacterIconType DlcSaveIcon
+        { get => default(CharacterIconType); set { } }
 
         [Data(0x68)] public int EnemiesDefeated { get; set; }
         [Data(0x5B0)] public short SavesCount { get; set; }
@@ -88,8 +89,12 @@ namespace KHSave.Lib3
 
         [Data(0x84770)] public int PhotoMaxCount { get; set; }
         [Data(0x84784, 90, 0x19004)] public List<PhotoEntry> Photos { get; set; }
-        public string DlcMapPath { get => string.Empty; set { } }
-        public string DlcSpawnPoint { get => string.Empty; set { } }
+
+        public string DlcMapPath
+        { get => string.Empty; set { } }
+
+        public string DlcSpawnPoint
+        { get => string.Empty; set { } }
 
         internal static bool IsValidInternal(Stream stream)
         {

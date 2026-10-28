@@ -1,62 +1,62 @@
-﻿<UserControl x:Class="KHSave.SaveEditor.Ff7Remake.Views.ChapterObjectsView"
+<UserControl x:Class="KHSave.SaveEditor.Ff7Remake.Views.ChapterObjectsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:KHSave.SaveEditor.Ff7Remake.Views"
              xmlns:controls="clr-namespace:KHSave.SaveEditor.Common.Controls;assembly=KHSave.SaveEditor.Common"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="400">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <ComboBox
             Grid.Row="0"
             ItemsSource="{Binding Items}"
             SelectedItem="{Binding SelectedItem}"
-            DisplayMemberPath="Name"/>
+            DisplayMemberPath="Name" />
 
         <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
             <StackPanel DataContext="{Binding SelectedItem}">
                 <controls:TwoEqualColumnsStackPanel Grid.Column="2">
-                    <TextBlock Text="Object ID (relative to map)"/>
-                    <TextBox Text="{Binding Index, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Text="Object ID (relative to map)" />
+                    <TextBox Text="{Binding Index, UpdateSourceTrigger=PropertyChanged}" />
 
-                    <TextBlock Text="Unknown 08 (can only be 1 or 0?)"/>
-                    <TextBox Text="{Binding Unknown08, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Text="Unknown 08 (can only be 1 or 0?)" />
+                    <TextBox Text="{Binding Unknown08, UpdateSourceTrigger=PropertyChanged}" />
 
-                    <TextBlock Text="Position X"/>
-                    <TextBox Text="{Binding PositionX, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Text="Position X" />
+                    <TextBox Text="{Binding PositionX, UpdateSourceTrigger=PropertyChanged}" />
 
-                    <TextBlock Text="Position Y"/>
-                    <TextBox Text="{Binding PositionY, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Text="Position Y" />
+                    <TextBox Text="{Binding PositionY, UpdateSourceTrigger=PropertyChanged}" />
 
-                    <TextBlock Text="Position Z"/>
-                    <TextBox Text="{Binding PositionZ}"/>
+                    <TextBlock Text="Position Z" />
+                    <TextBox Text="{Binding PositionZ}" />
 
-                    <TextBlock Text="Unknown 0c"/>
-                    <TextBox Text="{Binding Unknown0c, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Text="Unknown 0c" />
+                    <TextBox Text="{Binding Unknown0c, UpdateSourceTrigger=PropertyChanged}" />
 
-                    <TextBlock Text="Angle rotation? (-180..180)"/>
-                    <TextBox Text="{Binding Unknown04, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Text="Angle rotation? (-180..180)" />
+                    <TextBox Text="{Binding Unknown04, UpdateSourceTrigger=PropertyChanged}" />
 
-                    <TextBlock Text="Facing angle? (-180..180)"/>
-                    <TextBox Text="{Binding Rotation, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Text="Facing angle? (-180..180)" />
+                    <TextBox Text="{Binding Rotation, UpdateSourceTrigger=PropertyChanged}" />
                 </controls:TwoEqualColumnsStackPanel>
 
-                <Separator Margin="3 10 3 10"/>
-                <TextBlock Text="Tooling for debug and research:"/>
+                <Separator Margin="3 10 3 10" />
+                <TextBlock Text="Tooling for debug and research:" />
                 <Button Margin="3" Command="{Binding DebugTeleportToCloudCommand}"
-                        Content="Teleport this object to Cloud location"/>
+                        Content="Teleport this object to Cloud location" />
                 <Button Margin="3" Command="{Binding DebugCloudToObjectCommand}"
-                        Content="Teleport Cloud to this object"/>
+                        Content="Teleport Cloud to this object" />
                 <Button Margin="3" Command="{Binding DebugTeleportToObjectCommand}"
-                        Content="Teleport all the object to this object"/>
+                        Content="Teleport all the object to this object" />
                 <Button Margin="3" Command="{Binding DebugIdRandomnessCommand}"
-                        Content="Assign all the Object IDs to the current Object ID"/>
+                        Content="Assign all the Object IDs to the current Object ID" />
                 <TextBlock TextWrapping="Wrap">
                     Those tooling buttons are for experimental usage;
                     therefore I did not tweaked the UI to update properly

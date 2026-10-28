@@ -1,23 +1,23 @@
-﻿<UserControl x:Class="KHSave.SaveEditor.Persona5.Views.Persona5MainView"
+<UserControl x:Class="KHSave.SaveEditor.Persona5.Views.Persona5MainView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:KHSave.SaveEditor.Persona5.Views"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="250" d:DesignWidth="300">
     <TabControl SelectedValue="{Binding CurrentTabId, Mode=TwoWay}" SelectedValuePath="Header">
         <TabItem Header="Characters">
-            <local:CharactersView DataContext="{Binding Characters}"/>
+            <local:CharactersView DataContext="{Binding Characters}" />
         </TabItem>
         <TabItem Header="Inventory" Visibility="Collapsed">
-            <local:InventoryView DataContext="{Binding Inventory}"/>
+            <local:InventoryView DataContext="{Binding Inventory}" />
         </TabItem>
         <TabItem Header="Compendium">
-            <local:CompendiumView DataContext="{Binding Compendium}"/>
+            <local:CompendiumView DataContext="{Binding Compendium}" />
         </TabItem>
         <TabItem Header="System">
-            <local:SystemView DataContext="{Binding System}"/>
+            <local:SystemView DataContext="{Binding System}" />
         </TabItem>
     </TabControl>
 </UserControl>

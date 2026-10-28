@@ -1,4 +1,3 @@
-using KHSave.SaveEditor.Kh3.Models;
 using KHSave.SaveEditor.Kh3.ViewModels;
 using System.Windows.Controls;
 

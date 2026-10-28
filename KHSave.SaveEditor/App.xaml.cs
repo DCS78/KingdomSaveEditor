@@ -4,10 +4,10 @@ using KHSave.SaveEditor.Services;
 using KHSave.SaveEditor.Views;
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
-using System.Windows.Threading;
 using Unity;
 
 namespace KHSave.SaveEditor
@@ -23,7 +23,7 @@ namespace KHSave.SaveEditor
             {
                 StartupFileName = args.FirstOrDefault();
 #if DEBUG
-                StartupFileName = StartupFileName ?? @"D:\Repository\KH3SaveEditor\KHSave.Tests\Saves\kh2fm.bin";
+                StartupFileName = StartupFileName ?? Path.Combine(AppContext.BaseDirectory, "Saves", "kh2fm.bin");
 #endif
             }
 
@@ -35,7 +35,6 @@ namespace KHSave.SaveEditor
 
             public string StartupFileName { get; }
         }
-
 
         protected override void OnStartup(StartupEventArgs e)
         {

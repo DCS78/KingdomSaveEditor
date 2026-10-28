@@ -32,17 +32,16 @@ namespace KHSave.Lib1
             [Data(0x2044)] public uint Room { get; set; }
             [Data(0x2048)] public uint SpawnLocation { get; set; }
 
-
             //Gummiships
             [Data(0x241C, Count = 10)] public Gummiship[] Gummiships { get; set; }
 
             //Needs testing
             [Data(0x16A30)] public int AutoLock { get; set; }
+
             [Data(0x16A34)] public int TargetLock { get; set; }
             [Data(0x16A38)] public int Camera { get; set; }
             [Data(0x16A40)] public int Vibration { get; set; }
             [Data(0x16A44)] public int Sound { get; set; }
-
 
             [Data(0x16418)] public byte Difficulty { get; set; }
 
@@ -53,4 +52,3 @@ namespace KHSave.Lib1
         }
     }
 }
-

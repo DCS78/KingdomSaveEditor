@@ -1,8 +1,6 @@
 using KHSave.SaveEditor.Common;
 using KHSave.SaveEditor.Services;
 using System.Diagnostics;
-using System.Drawing;
-using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -42,7 +40,6 @@ namespace KHSave.SaveEditor.Views
                         }
                         Close();
                     });
-
                 }, cancellationTokenSource.Token);
 
                 ShowDialog();

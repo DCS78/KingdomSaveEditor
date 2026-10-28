@@ -1,5 +1,4 @@
 using KHSave.LibPersona5;
-using KHSave.LibPersona5.Types;
 using System.IO;
 using Xunit;
 
@@ -49,9 +48,9 @@ namespace KHSave.Tests
             Assert.False(save.PartyModifierHaru);
             Assert.False(save.PartyModifierFutaba);
             Assert.False(save.PartyModifierAkechi);
-            Assert.Equal(-1525, save.PositionX, 0);
-            Assert.Equal(360, save.PositionY, 0);
-            Assert.Equal(-2922, save.PositionZ, 0);
+            Assert.Equal(-1525d, (double)save.PositionX, 0);
+            Assert.Equal(360d, (double)save.PositionY, 0);
+            Assert.Equal(-2922d, (double)save.PositionZ, 0);
             Assert.Equal(123, save.RoomCategory);
             Assert.Equal(101, save.RoomMap);
         }
@@ -78,9 +77,9 @@ namespace KHSave.Tests
             Assert.True(save.PartyModifierHaru);
             Assert.True(save.PartyModifierFutaba);
             Assert.False(save.PartyModifierAkechi);
-            Assert.Equal(-78, save.PositionX, 0);
-            Assert.Equal(0, save.PositionY, 0);
-            Assert.Equal(575, save.PositionZ, 0);
+            Assert.Equal(-78d, (double)save.PositionX, 0);
+            Assert.Equal(0d, (double)save.PositionY, 0);
+            Assert.Equal(575d, (double)save.PositionZ, 0);
             Assert.Equal(3, save.RoomCategory);
             Assert.Equal(2, save.RoomMap);
         }

@@ -53,7 +53,6 @@ namespace KHSave.LibRecom
             return magicCode == ValidMagicCode && stream.Length >= 0x10;
         }
 
-
         private static uint CalculateChecksum(byte[] data)
         {
             int checksum = -1;

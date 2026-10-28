@@ -18,7 +18,6 @@ namespace KHSave.Lib2.Types
         Antiform,
         Examine,
 
-
         [Consumable("Hi-Potion")] HiPotion = 0x14,
         [Consumable("Ether")] Ether,
         [Consumable("Elixir")] Elixir,
@@ -37,6 +36,5 @@ namespace KHSave.Lib2.Types
         [Consumable("Mega-Potion")] MegaPotion = 0xf2,
         [Consumable("Mega-Ether")] MegaEther = 0xf3,
         [Consumable("Megalixir")] Megalixir = 0xf4,
-        LimitForm = 673
     }
 }

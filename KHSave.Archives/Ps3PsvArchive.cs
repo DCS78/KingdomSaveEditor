@@ -20,6 +20,7 @@ namespace KHSave.Archives
             [Data] public int HeaderSize { get; set; }
             [Data] public int SaveType { get; set; }
         }
+
         private class Ps2Header
         {
             [Data] public int DisplaySize { get; set; }
@@ -33,18 +34,20 @@ namespace KHSave.Archives
             [Data] public int Icon3Size { get; set; }
             [Data] public int NumFiles { get; set; }
         }
+
         private class Ps2MainDirInfo
         {
-            [Data] public sceMcStDateTime Created { get; set; }
-            [Data] public sceMcStDateTime Modified { get; set; }
+            [Data] public SceMcStDateTime Created { get; set; }
+            [Data] public SceMcStDateTime Modified { get; set; }
             [Data] public int NumFilesInDir { get; set; }
             [Data] public int Attr { get; set; }
             [Data(Count = 32)] public string Name { get; set; }
         }
+
         private class Ps2FileEntry : IArchiveEntry
         {
-            [Data] public sceMcStDateTime Created { get; set; }
-            [Data] public sceMcStDateTime Modified { get; set; }
+            [Data] public SceMcStDateTime Created { get; set; }
+            [Data] public SceMcStDateTime Modified { get; set; }
             [Data] public int Size { get; set; }
             [Data] public int Attr { get; set; }
             [Data(Count = 32)] public string Name { get; set; }
@@ -57,7 +60,7 @@ namespace KHSave.Archives
             public DateTime DateModified { get => Map(Modified); set => throw new NotImplementedException(); }
             public int FlagModified { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-            private static DateTime Map(sceMcStDateTime date) => new(date.Year, date.Month, date.Day, date.Hour, date.Min, date.Sec);
+            private static DateTime Map(SceMcStDateTime date) => new(date.Year, date.Month, date.Day, date.Hour, date.Min, date.Sec);
         }
 
         internal Ps3PsvArchive()
@@ -87,7 +90,7 @@ namespace KHSave.Archives
             {
                 stream.Position = entry.Offset;
                 entry.Data = new byte[entry.Size];
-                stream.Read(entry.Data, 0, entry.Size);
+                stream.ReadExactly(entry.Data);
             }
 
             Entries = entries;

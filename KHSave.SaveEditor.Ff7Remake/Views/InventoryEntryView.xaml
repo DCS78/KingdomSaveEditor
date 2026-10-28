@@ -1,11 +1,11 @@
-﻿<UserControl x:Class="KHSave.SaveEditor.Ff7Remake.Views.InventoryEntryView"
+<UserControl x:Class="KHSave.SaveEditor.Ff7Remake.Views.InventoryEntryView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:KHSave.SaveEditor.Ff7Remake.Views"
              xmlns:common="clr-namespace:KHSave.SaveEditor.Common.Controls;assembly=KHSave.SaveEditor.Common"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="200">
     <UserControl.Resources>
         <SolidColorBrush x:Key="textForeground" Color="#F1F1F1" />
@@ -15,16 +15,16 @@
     <StackPanel>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="5"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="22"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="22" />
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" Grid.Column="0" Text="Item kind"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Item kind" />
             <ComboBox
                 Grid.Row="1" Grid.Column="0"
                 ItemsSource="{Binding ItemTypes}"
@@ -34,33 +34,33 @@
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
                             <Image Margin="0 0 3 0" Width="16" Height="16"
-                                Source="{Binding Icon}"/>
-                            <TextBlock Text="{Binding Name}"/>
+                                Source="{Binding Icon}" />
+                            <TextBlock Text="{Binding Name}" />
                         </StackPanel>
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
 
-            <TextBlock Grid.Row="0" Grid.Column="2" Text="Amount"/>
-            <TextBox Grid.Row="2" Grid.Column="2" Text="{Binding Count, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock Grid.Row="0" Grid.Column="2" Text="Amount" />
+            <TextBox Grid.Row="2" Grid.Column="2" Text="{Binding Count, UpdateSourceTrigger=PropertyChanged}" />
         </Grid>
 
-        <TextBlock Text="Date obtained"/>
-        <TextBox Text="{Binding Timestamp, Mode=OneWay}" IsReadOnly="True"/>
+        <TextBlock Text="Date obtained" />
+        <TextBox Text="{Binding Timestamp, Mode=OneWay}" IsReadOnly="True" />
 
         <common:TwoEqualColumnsStackPanel Visibility="{Binding AdvancedVisibility}" Margin="0 0 0 10">
-            <TextBlock Text="Item kind ID"/>
-            <TextBox Text="{Binding ItemId, UpdateSourceTrigger=PropertyChanged}"/>
-            <TextBlock Text="Category"/>
+            <TextBlock Text="Item kind ID" />
+            <TextBox Text="{Binding ItemId, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Category" />
             <ComboBox
                 ItemsSource="{Binding Categories}"
                 SelectedValue="{Binding Category}"
                 DisplayMemberPath="Name"
-                SelectedValuePath="Value"/>
-            <TextBlock Text="Unused 04"/>
-            <TextBox Text="{Binding Unused04, UpdateSourceTrigger=PropertyChanged}"/>
-            <TextBlock Text="Unused 14"/>
-            <TextBox Text="{Binding Unused14, UpdateSourceTrigger=PropertyChanged}"/>
+                SelectedValuePath="Value" />
+            <TextBlock Text="Unused 04" />
+            <TextBox Text="{Binding Unused04, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Unused 14" />
+            <TextBox Text="{Binding Unused14, UpdateSourceTrigger=PropertyChanged}" />
         </common:TwoEqualColumnsStackPanel>
 
         <StackPanel Visibility="{Binding NameRequestVisibility}">

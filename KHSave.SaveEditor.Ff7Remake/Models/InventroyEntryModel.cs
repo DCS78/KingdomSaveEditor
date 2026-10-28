@@ -16,7 +16,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-using KHSave.Attributes;
 using KHSave.Extensions;
 using KHSave.LibFf7Remake.Models;
 using KHSave.LibFf7Remake.Types;
@@ -48,8 +47,10 @@ namespace KHSave.SaveEditor.Ff7Remake.Models
 
         public Visibility SimpleVisibility => Global.IsAdvancedMode ? Visibility.Collapsed : Visibility.Visible;
         public Visibility AdvancedVisibility => Global.IsAdvancedMode ? Visibility.Visible : Visibility.Collapsed;
+
         public Uri AddItemRequestUrl =>
             new Uri($"https://github.com/Xeeynamo/KH3SaveEditor/issues/new?assignees=Xeeynamo&labels=ff7r-item&template=ff7r-missing-item-name-request.md&title=FF7R+Missing+item+name+request+(Item%20ID%20{ItemId})");
+
         public KhEnumListModel<ItemCategory> Categories => new KhEnumListModel<ItemCategory>();
         public IEnumerable<ItemModel> ItemTypes { get; }
 
@@ -61,6 +62,7 @@ namespace KHSave.SaveEditor.Ff7Remake.Models
 
         public string Timestamp => _inventory.UnixTimestamp.FromUnixEpoch().ToString();
         public int Count { get => _inventory.Count; set { _inventory.Count = value; OnPropertyChanged(); } }
+
         public InventoryType Type
         {
             get => _inventory.Type;
@@ -91,6 +93,7 @@ namespace KHSave.SaveEditor.Ff7Remake.Models
                 OnPropertyChanged(nameof(Type));
             }
         }
+
         public int ItemId { get => (int)Type; set { Type = (InventoryType)value; OnPropertyChanged(nameof(Type)); } }
 
         public int Unused04 { get => _inventory.Unused04; set => _inventory.Unused04 = value; }

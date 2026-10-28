@@ -16,18 +16,18 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+using KHSave.Lib3.Models;
+using KHSave.SaveEditor.Common.Exceptions;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using KHSave.SaveEditor.Common.Exceptions;
-using KHSave.Lib3.Models;
 using Xe.Tools;
 using Xe.Tools.Wpf.Commands;
 using Xe.Tools.Wpf.Dialogs;
-using System.Collections.Generic;
 
 namespace KHSave.SaveEditor.Kh3.ViewModels
 {
@@ -111,7 +111,7 @@ namespace KHSave.SaveEditor.Kh3.ViewModels
 
                 _entry.Data = new byte[_entry.Data.Length];
                 _entry.Length = (int)stream.Length;
-                stream.Read(_entry.Data, 0, _entry.Data.Length);
+                stream.ReadExactly(_entry.Data.AsSpan(0, _entry.Length));
             }
         }
 

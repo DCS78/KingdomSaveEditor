@@ -16,12 +16,12 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+using KHSave.Lib3.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows;
-using KHSave.Lib3.Models;
 using Xe.Tools.Wpf.Commands;
 using Xe.Tools.Wpf.Dialogs;
 using Xe.Tools.Wpf.Models;
@@ -41,7 +41,6 @@ namespace KHSave.SaveEditor.Kh3.ViewModels
         public PhotosViewModel(IEnumerable<PhotoEntry> list) :
             this(list.Select((pc, index) => new PhotoEntryViewModel(pc, index)))
         {
-
         }
 
         public PhotosViewModel(IEnumerable<PhotoEntryViewModel> list) :
@@ -83,7 +82,6 @@ namespace KHSave.SaveEditor.Kh3.ViewModels
                 Items.Clear();
                 OnPropertyChanged(nameof(Info));
                 OnPropertyChanged(nameof(Items));
-
             }, x => true);
         }
 

@@ -16,12 +16,12 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-using System;
 using KHSave.Attributes;
 using KHSave.Lib3.Models;
-using KHSave.SaveEditor.Common.Models;
 using KHSave.Lib3.Types;
+using KHSave.SaveEditor.Common.Models;
 using KHSave.SaveEditor.Common.Services;
+using System;
 
 namespace KHSave.SaveEditor.Kh3.Models
 {
@@ -62,6 +62,7 @@ namespace KHSave.SaveEditor.Kh3.Models
 
         public bool Obtained { get => inventoryEntry.Obtained; set => inventoryEntry.Obtained = value; }
         public bool Unseen { get => inventoryEntry.Unseen; set => inventoryEntry.Unseen = value; }
+
         public bool ShopVisible
         {
             get => inventoryEntry.ShopFlag1 | inventoryEntry.ShopFlag2;
@@ -72,6 +73,7 @@ namespace KHSave.SaveEditor.Kh3.Models
                 OnPropertyChanged(nameof(Flag3));
             }
         }
+
         public bool ShopSeen
         {
             get => inventoryEntry.ShopFlag1; set
@@ -80,6 +82,7 @@ namespace KHSave.SaveEditor.Kh3.Models
                 OnPropertyChanged(nameof(ShopVisible));
             }
         }
+
         public bool Flag3
         {
             get => inventoryEntry.ShopFlag2; set
@@ -88,6 +91,7 @@ namespace KHSave.SaveEditor.Kh3.Models
                 OnPropertyChanged(nameof(ShopVisible));
             }
         }
+
         public bool Flag4 { get => inventoryEntry.Flag4; set => inventoryEntry.Flag4 = value; }
         public bool Flag5 { get => inventoryEntry.Flag5; set => inventoryEntry.Flag5 = value; }
         public bool Flag6 { get => inventoryEntry.Flag6; set => inventoryEntry.Flag6 = value; }

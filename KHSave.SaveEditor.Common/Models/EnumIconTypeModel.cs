@@ -16,9 +16,9 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+using KHSave.SaveEditor.Common.Services;
 using System;
 using System.Windows.Media;
-using KHSave.SaveEditor.Common.Services;
 
 namespace KHSave.SaveEditor.Common.Models
 {
@@ -41,6 +41,5 @@ namespace KHSave.SaveEditor.Common.Models
                 return _icon;
             }
         }
-
     }
 }

@@ -1,33 +1,33 @@
 <UserControl x:Class="KHSave.SaveEditor.Kh2.MainView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:KHSave.SaveEditor.Kh2"
              xmlns:views="clr-namespace:KHSave.SaveEditor.Kh2.Views"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <TabControl>
         <TabItem Header="System">
-            <views:SystemView DataContext="{Binding System}"/>
+            <views:SystemView DataContext="{Binding System}" />
         </TabItem>
         <TabItem Header="Inventory">
-            <views:InventoryView DataContext="{Binding Inventory}"/>
+            <views:InventoryView DataContext="{Binding Inventory}" />
         </TabItem>
         <TabItem Header="Characters">
-            <views:PlayersView DataContext="{Binding Characters}"/>
+            <views:PlayersView DataContext="{Binding Characters}" />
         </TabItem>
         <TabItem Header="Drive forms">
-            <views:DriveFormsView DataContext="{Binding DriveForms}"/>
+            <views:DriveFormsView DataContext="{Binding DriveForms}" />
         </TabItem>
         <TabItem Header="Worlds">
-            <views:WorldsView DataContext="{Binding Worlds}"/>
+            <views:WorldsView DataContext="{Binding Worlds}" />
         </TabItem>
         <TabItem Header="Room visited">
-            <views:RoomVisitedView DataContext="{Binding RoomVisited}"/>
+            <views:RoomVisitedView DataContext="{Binding RoomVisited}" />
         </TabItem>
         <TabItem Header="Story">
-            <views:ProgressView DataContext="{Binding Progress}"/>
+            <views:ProgressView DataContext="{Binding Progress}" />
         </TabItem>
     </TabControl>
 </UserControl>

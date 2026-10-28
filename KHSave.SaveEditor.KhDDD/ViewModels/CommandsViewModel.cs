@@ -18,7 +18,6 @@ namespace KHSave.SaveEditor.KhDDD.ViewModels
         public CommandsViewModel(CommandEntry[] commands, IResourceGetter resourceGetter) :
             base(commands.Select(x => new CommandEntryViewModel(x, resourceGetter)))
         {
-
         }
 
         public string SearchTerm

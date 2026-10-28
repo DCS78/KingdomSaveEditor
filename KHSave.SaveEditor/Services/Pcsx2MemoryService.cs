@@ -12,6 +12,7 @@ namespace KHSave.SaveEditor.Services
         private const int Pcsx2EmulationBaseAddress = 0x20000000;
         private const int Pcsx2EmulationMemoryLength = 0x2000000;
         private const int BootFileMaximumStringLength = 0x20;
+
         private static readonly int[] PlayStation2BootFileOffsets = new int[]
         {
             0x12610, // Japan v1.00

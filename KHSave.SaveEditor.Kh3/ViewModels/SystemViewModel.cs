@@ -16,16 +16,16 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-using System.Windows;
 using KHSave.Attributes;
-using KHSave.Lib3.Types;
-using Xe.Tools;
-using KHSave.SaveEditor.Common.Models;
-using KHSave.SaveEditor.Common;
-using System.Collections.Generic;
-using KHSave.SaveEditor.Kh3.Models;
-using System.Linq;
 using KHSave.Lib3;
+using KHSave.Lib3.Types;
+using KHSave.SaveEditor.Common;
+using KHSave.SaveEditor.Common.Models;
+using KHSave.SaveEditor.Kh3.Models;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows;
+using Xe.Tools;
 
 namespace KHSave.SaveEditor.Kh3.ViewModels
 {

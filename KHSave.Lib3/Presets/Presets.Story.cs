@@ -20,75 +20,69 @@ using KHSave.Lib3.Types;
 using System.Collections.Generic;
 using System.Linq;
 using static KHSave.Lib3.Types.StoryLabelTypeBt;
+using static KHSave.Lib3.Types.StoryLabelTypeBtDlc7;
+using static KHSave.Lib3.Types.StoryLabelTypeBtDlc7Monument;
+using static KHSave.Lib3.Types.StoryLabelTypeBtDlc8;
 using static KHSave.Lib3.Types.StoryLabelTypeBx;
 using static KHSave.Lib3.Types.StoryLabelTypeCa;
 using static KHSave.Lib3.Types.StoryLabelTypeCaChartLastAccess;
-using static KHSave.Lib3.Types.StoryLabelTypeCaShipRide;
 using static KHSave.Lib3.Types.StoryLabelTypeCaPortroyalSearch;
+using static KHSave.Lib3.Types.StoryLabelTypeCaShipRide;
 using static KHSave.Lib3.Types.StoryLabelTypeCs;
 using static KHSave.Lib3.Types.StoryLabelTypeDi;
 using static KHSave.Lib3.Types.StoryLabelTypeDp;
 using static KHSave.Lib3.Types.StoryLabelTypeDw;
 using static KHSave.Lib3.Types.StoryLabelTypeEw;
-using static KHSave.Lib3.Types.StoryLabelTypeEwSub;
-using static KHSave.Lib3.Types.StoryLabelTypeEwMission;
-using static KHSave.Lib3.Types.StoryLabelTypeEwRa;
-using static KHSave.Lib3.Types.StoryLabelTypeEwMi;
-using static KHSave.Lib3.Types.StoryLabelTypeEwTs;
 using static KHSave.Lib3.Types.StoryLabelTypeEwCa;
 using static KHSave.Lib3.Types.StoryLabelTypeEwFz;
+using static KHSave.Lib3.Types.StoryLabelTypeEwMi;
+using static KHSave.Lib3.Types.StoryLabelTypeEwMission;
+using static KHSave.Lib3.Types.StoryLabelTypeEwRa;
+using static KHSave.Lib3.Types.StoryLabelTypeEwSub;
+using static KHSave.Lib3.Types.StoryLabelTypeEwTs;
 using static KHSave.Lib3.Types.StoryLabelTypeFz;
 using static KHSave.Lib3.Types.StoryLabelTypeFzMinigame;
+using static KHSave.Lib3.Types.StoryLabelTypeGameBattle;
+using static KHSave.Lib3.Types.StoryLabelTypeGameShop;
 using static KHSave.Lib3.Types.StoryLabelTypeGm;
 using static KHSave.Lib3.Types.StoryLabelTypeGm1;
 using static KHSave.Lib3.Types.StoryLabelTypeGm2;
 using static KHSave.Lib3.Types.StoryLabelTypeGm3;
 using static KHSave.Lib3.Types.StoryLabelTypeGm3sub;
-using static KHSave.Lib3.Types.StoryLabelTypeGmSys;
 using static KHSave.Lib3.Types.StoryLabelTypeGmLevelUp;
+using static KHSave.Lib3.Types.StoryLabelTypeGmSys;
 using static KHSave.Lib3.Types.StoryLabelTypeHe;
 using static KHSave.Lib3.Types.StoryLabelTypeHeSub;
-using static KHSave.Lib3.Types.StoryLabelTypeKg;
 using static KHSave.Lib3.Types.StoryLabelTypeKgA;
 using static KHSave.Lib3.Types.StoryLabelTypeKgB;
-using static KHSave.Lib3.Types.StoryLabelTypeKgC;
-using static KHSave.Lib3.Types.StoryLabelTypeKgD;
+using static KHSave.Lib3.Types.StoryLabelTypeKgDlcCharSelect;
 using static KHSave.Lib3.Types.StoryLabelTypeMi;
 using static KHSave.Lib3.Types.StoryLabelTypePo;
 using static KHSave.Lib3.Types.StoryLabelTypeRa;
+using static KHSave.Lib3.Types.StoryLabelTypeRaBird;
 using static KHSave.Lib3.Types.StoryLabelTypeRaDandelion;
 using static KHSave.Lib3.Types.StoryLabelTypeRaRabbit;
 using static KHSave.Lib3.Types.StoryLabelTypeRaRainbow;
-using static KHSave.Lib3.Types.StoryLabelTypeRaBird;
 using static KHSave.Lib3.Types.StoryLabelTypeRg;
+using static KHSave.Lib3.Types.StoryLabelTypeRgDlc;
 using static KHSave.Lib3.Types.StoryLabelTypeSf;
+using static KHSave.Lib3.Types.StoryLabelTypeSsDlc;
+using static KHSave.Lib3.Types.StoryLabelTypeSsDlcSub;
 using static KHSave.Lib3.Types.StoryLabelTypeTs;
 using static KHSave.Lib3.Types.StoryLabelTypeTsSub;
 using static KHSave.Lib3.Types.StoryLabelTypeTt;
 using static KHSave.Lib3.Types.StoryLabelTypeTtPo;
 using static KHSave.Lib3.Types.StoryLabelTypeTtRemy;
+using static KHSave.Lib3.Types.StoryLabelTypeWmBx;
+using static KHSave.Lib3.Types.StoryLabelTypeWmCa;
+using static KHSave.Lib3.Types.StoryLabelTypeWmFz;
 using static KHSave.Lib3.Types.StoryLabelTypeWmHe;
-using static KHSave.Lib3.Types.StoryLabelTypeWmTt;
+using static KHSave.Lib3.Types.StoryLabelTypeWmKg;
+using static KHSave.Lib3.Types.StoryLabelTypeWmMi;
 using static KHSave.Lib3.Types.StoryLabelTypeWmRa;
 using static KHSave.Lib3.Types.StoryLabelTypeWmTs;
-using static KHSave.Lib3.Types.StoryLabelTypeWmMi;
-using static KHSave.Lib3.Types.StoryLabelTypeWmFz;
-using static KHSave.Lib3.Types.StoryLabelTypeWmCa;
-using static KHSave.Lib3.Types.StoryLabelTypeWmBx;
-using static KHSave.Lib3.Types.StoryLabelTypeWmKg;
-using static KHSave.Lib3.Types.StoryLabelTypeGameBattle;
-using static KHSave.Lib3.Types.StoryLabelTypeGameShop;
+using static KHSave.Lib3.Types.StoryLabelTypeWmTt;
 using static KHSave.Lib3.Types.StoryLabelTypeYt;
-using static KHSave.Lib3.Types.StoryLabelTypeBtDlc8;
-using static KHSave.Lib3.Types.StoryLabelTypeBtDlc7;
-using static KHSave.Lib3.Types.StoryLabelTypeBtDlc7Monument;
-using static KHSave.Lib3.Types.StoryLabelTypeKgDlc;
-using static KHSave.Lib3.Types.StoryLabelTypeKgDlc5c;
-using static KHSave.Lib3.Types.StoryLabelTypeKgDlc5d;
-using static KHSave.Lib3.Types.StoryLabelTypeKgDlcCharSelect;
-using static KHSave.Lib3.Types.StoryLabelTypeRgDlc;
-using static KHSave.Lib3.Types.StoryLabelTypeSsDlc;
-using static KHSave.Lib3.Types.StoryLabelTypeSsDlcSub;
 
 namespace KHSave.Lib3.Presets
 {
@@ -445,7 +439,6 @@ namespace KHSave.Lib3.Presets
                 [FZ_Sub_SLIDEMISSION_SLIDE2] = "",
                 [FZ_Sub_SLIDEMISSION_SLIDE3] = "",
                 [FZ_Sub_SLIDEMISSION_END] = "Complete"
-
             }.ToStoryLabel(),
             [StoryFlagType.gameflow_GM] = new Dictionary<StoryLabelTypeGm, string>
             {
@@ -458,19 +451,16 @@ namespace KHSave.Lib3.Presets
                 [GM_EVENT6] = "",
                 [GM_EVENT7] = "",
                 [GM_END] = "Story Done"
-
             }.ToStoryLabel(),
             [StoryFlagType.gameflow_GM_01] = new Dictionary<StoryLabelTypeGm1, string>
             {
                 [GM_01_INIT] = "",
                 [GM_01_END] = ""
-
             }.ToStoryLabel(),
             [StoryFlagType.gameflow_GM_02] = new Dictionary<StoryLabelTypeGm2, string>
             {
                 [GM_02_INIT] = "",
                 [GM_02_END] = ""
-
             }.ToStoryLabel(),
             [StoryFlagType.gameflow_GM_03] = new Dictionary<StoryLabelTypeGm3, string>
             {
@@ -480,7 +470,6 @@ namespace KHSave.Lib3.Presets
                 [GM_03_BOSS_01_END] = "",
                 [GM_03_END] = "",
                 [GM_03_VISIT10] = ""
-
             }.ToStoryLabel(),
             [StoryFlagType.gameflow_GM_03_SUB] = new Dictionary<StoryLabelTypeGm3sub, string>
             {
@@ -492,7 +481,6 @@ namespace KHSave.Lib3.Presets
                 [GM_03_SUB_CAMERA_10] = "",
                 [GM_03_SUB_BOSS] = "",
                 [GM_03_SUB_END] = "",
-
             }.ToStoryLabel(),
             [StoryFlagType.gameflow_GM_SYS] = new Dictionary<StoryLabelTypeGmSys, string>
             {
@@ -504,7 +492,6 @@ namespace KHSave.Lib3.Presets
                 [GM_SYS_EVENT5] = "",
                 [GM_SYS_EVENT6] = "",
                 [GM_SYS_END] = "",
-
             }.ToStoryLabel(),
             [StoryFlagType.gameflow_GM_SYS_LEVELUP] = new Dictionary<StoryLabelTypeGmLevelUp, string>
             {

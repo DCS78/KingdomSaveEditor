@@ -13,7 +13,6 @@ namespace KHSave.SaveEditor.Kh2.ViewModels
         public InventoryViewModel(ISaveKh2 save) :
             base(save.InventoryCount.Select((_, i) => new InventoryItemModel(i, save.InventoryCount)))
         {
-
         }
 
         public string SearchTerm

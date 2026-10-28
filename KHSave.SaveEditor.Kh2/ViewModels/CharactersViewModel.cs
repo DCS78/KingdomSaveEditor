@@ -17,7 +17,6 @@
 */
 
 using KHSave.Lib2;
-using KHSave.Lib2.Models;
 using KHSave.SaveEditor.Kh2.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +38,6 @@ namespace KHSave.SaveEditor.Kh2.ViewModels
         public CharactersViewModel(IEnumerable<CharacterViewModel> list) :
             base(list)
         {
-
         }
 
         public Visibility PlayerVisible => IsItemSelected ? Visibility.Visible : Visibility.Collapsed;

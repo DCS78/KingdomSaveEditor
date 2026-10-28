@@ -53,6 +53,5 @@ namespace KHSave.LibBbs.Types
         [Keyblade("Royal Radiance (Terra)")] RoyalRadianceTerra = 0x0031,
         [Keyblade("Master's Defender")] MastersDefender = 0x0032,
         [Keyblade("Ultima Cannon")] UltimaCannon = 0x0033,
-
     }
 }

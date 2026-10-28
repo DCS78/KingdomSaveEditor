@@ -86,15 +86,16 @@ namespace KHSave.SaveEditor.Common.Services
             {
                 case '=':
                     return count.Count == n;
+
                 case '>':
                     return count.Count > n;
+
                 case '<':
                     return count.Count < n;
+
                 default:
                     return true;
             }
-
-
         }
     }
 }

@@ -16,10 +16,10 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-using System;
-using System.Collections.Generic;
 using KHSave.Lib3.Models;
 using KHSave.SaveEditor.Kh3.Models;
+using System;
+using System.Collections.Generic;
 
 namespace KHSave.SaveEditor.Kh3.ViewModels
 {

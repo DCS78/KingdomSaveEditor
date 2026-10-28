@@ -17,7 +17,6 @@
 */
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Xe.Tools.Wpf.Models;
@@ -37,16 +36,6 @@ namespace KHSave.SaveEditor.Kh3.Models
         public RecordAttractionListModel(IEnumerable<AttractionRecordItemModel<T>> list)
             : base(list)
         {
-        }
-
-        public IEnumerator<AttractionRecordItemModel<T>> GetEnumerator()
-        {
-            return Items.GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return Items.GetEnumerator();
         }
 
         protected override AttractionRecordItemModel<T> OnNewItem()

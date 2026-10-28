@@ -16,10 +16,10 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+using KHSave.Lib3.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
-using KHSave.Lib3.Models;
 using Xe.Tools.Wpf.Models;
 
 namespace KHSave.SaveEditor.Kh3.ViewModels
@@ -29,13 +29,11 @@ namespace KHSave.SaveEditor.Kh3.ViewModels
         public PlayersViewModel(IEnumerable<PlayableCharacter> list) :
             base(list.Select((pc, index) => new PlayerViewModel(pc, index)))
         {
-
         }
 
         public PlayersViewModel(IEnumerable<PlayerViewModel> list) :
             base(list)
         {
-
         }
 
         public Visibility PlayerVisible => IsItemSelected ? Visibility.Visible : Visibility.Collapsed;

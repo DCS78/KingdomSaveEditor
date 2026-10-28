@@ -16,10 +16,9 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-using System;
-using System.IO;
 using KHSave.Lib3;
 using KHSave.Lib3.Types;
+using System.IO;
 using Xunit;
 
 namespace KHSave.Tests
@@ -51,12 +50,12 @@ namespace KHSave.Tests
         [InlineData(FilePath)]
         [InlineData(File109Path)]
         public void TestWriteWithoutChanges(string filePath) => File.OpenRead(filePath).Using(stream =>
-        {
-            var mem = new MemoryStream((int)stream.Length);
-            SaveKh3.Read(stream).Write(mem);
+                {
+                    var mem = new MemoryStream((int)stream.Length);
+                    SaveKh3.Read(stream).Write(mem);
 
-            AssertSaveGame(SaveKh3.Read(mem.SetPosition(0)));
-        });
+                    AssertSaveGame(SaveKh3.Read(mem.SetPosition(0)));
+                });
 
         [Theory]
         [InlineData(FilePath)]
@@ -75,7 +74,6 @@ namespace KHSave.Tests
 
                 mem = new MemoryStream((int)stream.Length);
                 tempSave.Write(mem);
-
             });
 
             var save = SaveKh3.Read(mem.SetPosition(0));

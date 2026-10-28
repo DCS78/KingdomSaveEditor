@@ -35,6 +35,7 @@ namespace KHSave.SaveEditor.KhBbs.ViewModels
                 case GameVersion.FinalMix:
                     save = SaveKhBbs.Read<SaveKhBbs.SaveFinalMix>(stream);
                     break;
+
                 default:
                     throw new SaveNotSupportedException("The version is not supported.");
             }

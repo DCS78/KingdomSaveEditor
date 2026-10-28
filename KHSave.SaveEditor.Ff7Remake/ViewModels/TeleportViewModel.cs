@@ -16,7 +16,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-using KHSave.LibFf7Remake;
 using KHSave.SaveEditor.Ff7Remake.Data;
 using KHSave.SaveEditor.Ff7Remake.Models;
 using System;

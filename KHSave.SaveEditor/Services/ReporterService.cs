@@ -1,10 +1,6 @@
 using KHSave.SaveEditor.Interfaces;
 using KHSave.SaveEditor.VersionCheck;
-using Newtonsoft.Json;
 using System;
-using System.Diagnostics;
-using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace KHSave.SaveEditor.Services
@@ -90,7 +86,9 @@ namespace KHSave.SaveEditor.Services
         public static ReporterService Instance { get; } = new ReporterService();
 
         public void SendGameName(string name) => GlobalReporterService.SendGameName(name);
+
         public void SendCrashReport(Exception ex) => GlobalReporterService.SendCrashReport(ex);
+
         public void DeleteCookies() => GlobalReporterService.DeleteCookies();
     }
 }

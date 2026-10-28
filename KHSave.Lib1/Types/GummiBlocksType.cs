@@ -1,4 +1,3 @@
-using KHSave.Attributes;
 using KHSave.Lib1.Attributes;
 
 namespace KHSave.Lib1.Types
@@ -70,9 +69,9 @@ namespace KHSave.Lib1.Types
         [WeaponGummi("Meteor-G", 1, 1, 2, 35, 6, 300, 0.1f, 1500)] MeteorG,
         [WeaponGummi("Ultima-G", 1, 1, 3, 40, 4, 1000, 0.1f, 2500)] UltimaG,
 
-
         //Other Gummi items that aren't blocks
         [ExtraGummi("Spray", 1, 250, 0, "Adds color to gummi blocks.")] Spray,
+
         [ExtraGummi("Pallete", 1, 400, 0, "Provides a variety of paint colors.")] Pallete,
         [ExtraGummi("Sys.UP1", 1, 400, 0, "Assembly area (8).")] SysUP1,
         [ExtraGummi("Sys.UP2", 1, 750, 0, "Assembly area (10).")] SysUP2,

@@ -16,7 +16,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-using KHSave.LibFf7Remake.Types;
 using Xe.BinaryMapper;
 
 namespace KHSave.LibFf7Remake.Models

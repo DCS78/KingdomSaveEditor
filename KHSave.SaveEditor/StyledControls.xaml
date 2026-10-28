@@ -7,13 +7,13 @@
                 <ControlTemplate TargetType="{x:Type CheckBox}">
                     <StackPanel Orientation="Horizontal">
                         <Image x:Name="checkboxImage" Width="18"
-                                   Source="pack://application:,,,/KHSave.SaveEditor;component/Images/kh2-icon-ability.png"/>
-                        <ContentPresenter/>
+                                   Source="pack://application:,,,/KHSave.SaveEditor;component/Images/kh2-icon-ability.png" />
+                        <ContentPresenter />
                     </StackPanel>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="checkboxImage" Property="Source"
-                                        Value="pack://application:,,,/KHSave.SaveEditor;component/Images/kh2-icon-ability-equipped.png"/>
+                                        Value="pack://application:,,,/KHSave.SaveEditor;component/Images/kh2-icon-ability-equipped.png" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

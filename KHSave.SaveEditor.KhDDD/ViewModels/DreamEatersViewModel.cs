@@ -9,7 +9,6 @@ namespace KHSave.SaveEditor.KhDDD.ViewModels
         public DreamEatersViewModel(DreamEater[] dreamEaters) :
             base(dreamEaters.Select(x => new DreamEaterViewModel(x)))
         {
-
         }
     }
 }

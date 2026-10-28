@@ -18,6 +18,7 @@ namespace KHSave.SaveEditor.KhRecom.Models
         public byte Index { get; }
 
         public bool Equals(CardIndex otherCardIndex) => Index == otherCardIndex.Index;
+
         public bool Equals(int index) => Index == index;
 
         public static implicit operator int(CardIndex cardIndex) => cardIndex.Index;

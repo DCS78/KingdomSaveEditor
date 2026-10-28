@@ -25,7 +25,7 @@ namespace KHSave.SaveEditor.Common
 {
     internal class Settings : ApplicationSettingsBase
     {
-        T Get<T>(T defaultValue, [CallerMemberName] string propertyName = null)
+        private T Get<T>(T defaultValue, [CallerMemberName] string propertyName = null)
         {
             try
             {
@@ -38,7 +38,7 @@ namespace KHSave.SaveEditor.Common
             }
         }
 
-        void Set<T>(T value, [CallerMemberName] string propertyName = null) => this[propertyName] = value;
+        private void Set<T>(T value, [CallerMemberName] string propertyName = null) => this[propertyName] = value;
 
         [UserScopedSetting]
         public bool AdvancedMode
@@ -69,14 +69,14 @@ namespace KHSave.SaveEditor.Common
         }
 
         [UserScopedSetting]
-        public string LastPersona3Tab
+        public string LastPersona5Tab
         {
             get => Get("Characters");
             set => Set(value);
         }
 
         [UserScopedSetting]
-        public string LastPersona5Tab
+        public string LastPersona3Tab
         {
             get => Get("Characters");
             set => Set(value);
@@ -141,22 +141,22 @@ namespace KHSave.SaveEditor.Common
             }
         }
 
-        public static string LastPersona3Tab
-        {
-            get => Settings.LastPersona3Tab;
-            set
-            {
-                Settings.LastPersona3Tab = value;
-                Settings.Save();
-            }
-        }
-
         public static string LastPersona5Tab
         {
             get => Settings.LastPersona5Tab;
             set
             {
                 Settings.LastPersona5Tab = value;
+                Settings.Save();
+            }
+        }
+
+        public static string LastPersona3Tab
+        {
+            get => Settings.LastPersona3Tab;
+            set
+            {
+                Settings.LastPersona3Tab = value;
                 Settings.Save();
             }
         }
@@ -180,7 +180,6 @@ namespace KHSave.SaveEditor.Common
                 Settings.Save();
             }
         }
-
 
         public static bool CanDisplay(object item) => IsAdvancedMode || CanDisplayInBasicMode(item);
 

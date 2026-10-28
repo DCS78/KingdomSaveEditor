@@ -1,21 +1,21 @@
-﻿<UserControl x:Class="KHSave.SaveEditor.Persona5.Views.CharacterView"
+<UserControl x:Class="KHSave.SaveEditor.Persona5.Views.CharacterView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:KHSave.SaveEditor.Persona5.Views" xmlns:common="clr-namespace:KHSave.SaveEditor.Common.Controls;assembly=KHSave.SaveEditor.Common"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="800" d:DesignWidth="450">
     <UserControl.Resources>
-        <CollectionViewSource x:Key="AbilityTypes" Source="{Binding AbilityTypes}"/>
+        <CollectionViewSource x:Key="AbilityTypes" Source="{Binding AbilityTypes}" />
         <DataTemplate x:Key="EquipTemplate">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Margin="0 0 3 0" Width="61" Height="20" Source="{Binding Icon}"/>
+                <Image Grid.Column="0" Margin="0 0 3 0" Width="61" Height="20" Source="{Binding Icon}" />
                 <TextBlock Grid.Column="1" Text="{Binding Name}" />
             </Grid>
         </DataTemplate>
@@ -24,28 +24,27 @@
         <TabItem Header="Stats">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel>
-                    <CheckBox Content="Unlocked" IsChecked="{Binding IsUnlocked}"/>
+                    <CheckBox Content="Unlocked" IsChecked="{Binding IsUnlocked}" />
                     <common:TwoEqualColumnsStackPanel>
-                        <TextBlock Text="Current HP"/>
-                        <TextBox Text="{Binding CurrentHp, UpdateSourceTrigger=PropertyChanged}"/>
-                        <TextBlock Text="Current MP"/>
-                        <TextBox Text="{Binding CurrentMp, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBlock Text="Current HP" />
+                        <TextBox Text="{Binding CurrentHp, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Current MP" />
+                        <TextBox Text="{Binding CurrentMp, UpdateSourceTrigger=PropertyChanged}" />
 
-                        <TextBlock Text="Experience"/>
-                        <TextBox Text="{Binding Experience, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBlock Text="Experience" />
+                        <TextBox Text="{Binding Experience, UpdateSourceTrigger=PropertyChanged}" />
                     </common:TwoEqualColumnsStackPanel>
                     <common:TwoEqualColumnsStackPanel>
-                        <TextBlock Text="Melee Weapon"/>
-                        <ComboBox ItemsSource="{Binding MeleeWeapons}" SelectedValue="{Binding MeleeWeaponId}" SelectedValuePath="Value" ItemTemplate="{StaticResource EquipTemplate}"/>
-                        <TextBlock Text="Range Weapon"/>
-                        <ComboBox ItemsSource="{Binding RangeWeapons}" SelectedValue="{Binding RangeWeaponId}" SelectedValuePath="Value" ItemTemplate="{StaticResource EquipTemplate}"/>
-                        <TextBlock Text="Protector"/>
-                        <ComboBox ItemsSource="{Binding Armors}" SelectedValue="{Binding ProtectorId}" SelectedValuePath="Value" ItemTemplate="{StaticResource EquipTemplate}"/>
-                        <TextBlock Text="Accessory"/>
-                        <ComboBox ItemsSource="{Binding Accessories}" SelectedValue="{Binding AccessoryId}" SelectedValuePath="Value" ItemTemplate="{StaticResource EquipTemplate}"/>
-                        <TextBlock Text="Outfit"/>
-                        <ComboBox ItemsSource="{Binding Outfits}" SelectedValue="{Binding OutfitId}" SelectedValuePath="Value" ItemTemplate="{StaticResource EquipTemplate}"/>
-                        
+                        <TextBlock Text="Melee Weapon" />
+                        <ComboBox ItemsSource="{Binding MeleeWeapons}" SelectedValue="{Binding MeleeWeaponId}" SelectedValuePath="Value" ItemTemplate="{StaticResource EquipTemplate}" />
+                        <TextBlock Text="Range Weapon" />
+                        <ComboBox ItemsSource="{Binding RangeWeapons}" SelectedValue="{Binding RangeWeaponId}" SelectedValuePath="Value" ItemTemplate="{StaticResource EquipTemplate}" />
+                        <TextBlock Text="Protector" />
+                        <ComboBox ItemsSource="{Binding Armors}" SelectedValue="{Binding ProtectorId}" SelectedValuePath="Value" ItemTemplate="{StaticResource EquipTemplate}" />
+                        <TextBlock Text="Accessory" />
+                        <ComboBox ItemsSource="{Binding Accessories}" SelectedValue="{Binding AccessoryId}" SelectedValuePath="Value" ItemTemplate="{StaticResource EquipTemplate}" />
+                        <TextBlock Text="Outfit" />
+                        <ComboBox ItemsSource="{Binding Outfits}" SelectedValue="{Binding OutfitId}" SelectedValuePath="Value" ItemTemplate="{StaticResource EquipTemplate}" />
                     </common:TwoEqualColumnsStackPanel>
                 </StackPanel>
             </ScrollViewer>
@@ -53,9 +52,9 @@
         <TabItem Header="Persona">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
 
                 <ListBox
@@ -63,13 +62,12 @@
                     ItemsSource="{Binding Items}"
                     SelectedIndex="{Binding SelectedIndex}"
                     SelectedItem="{Binding SelectedItem}"
-                    DisplayMemberPath="Name"
-                    />
+                    DisplayMemberPath="Name" />
                 <Grid Grid.Column="2" Margin="0 0 10 0" Visibility="{Binding EntryNotVisible}">
-                    <Label Content="Select a persona to view or edit"/>
+                    <Label Content="Select a persona to view or edit" />
                 </Grid>
                 <Grid Grid.Column="2" Margin="0 0 10 0" Visibility="{Binding EntryVisible}">
-                    <local:PersonaView DataContext="{Binding SelectedItem}"/>
+                    <local:PersonaView DataContext="{Binding SelectedItem}" />
                 </Grid>
             </Grid>
         </TabItem>

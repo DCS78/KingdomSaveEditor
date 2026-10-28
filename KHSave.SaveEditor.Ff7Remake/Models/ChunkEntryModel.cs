@@ -18,7 +18,6 @@
 
 using KHSave.LibFf7Remake;
 using KHSave.LibFf7Remake.Chunks;
-using KHSave.LibFf7Remake.Models;
 using KHSave.SaveEditor.Common.Contracts;
 using System;
 using System.Collections.Generic;
@@ -36,6 +35,7 @@ namespace KHSave.SaveEditor.Ff7Remake.Models
         private readonly IRefreshUi _refreshUi;
         private readonly Chunk _chunk;
         private readonly int _index;
+
         private readonly IEnumerable<FileDialogFilter> Filter = FileDialogFilterComposer
             .Compose()
             .AddExtensions("Final Fantasy VII Remake CHUNK", "ff7rchunk")
@@ -60,6 +60,7 @@ namespace KHSave.SaveEditor.Ff7Remake.Models
 
         public string MagicCode { get => _chunk.Content?.MagicCode; set => _chunk.Content.MagicCode = value; }
         public int Unknown10 { get => _chunk.Content?.Unknown10 ?? -1; set => _chunk.Content.Unknown10 = value; }
+
         public int DataSize
         {
             get

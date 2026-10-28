@@ -6,16 +6,15 @@ using KHSave.SaveEditor.Kh1.ViewModels;
 using KHSave.SaveEditor.Kh2.ViewModels;
 using KHSave.SaveEditor.Kh3.ViewModels;
 using KHSave.SaveEditor.KhBbs.ViewModels;
-using KHSave.SaveEditor.KhRecom.ViewModels;
-using KHSave.SaveEditor.Persona5.ViewModels;
 using KHSave.SaveEditor.KhDDD.ViewModels;
+using KHSave.SaveEditor.KhRecom.ViewModels;
+using KHSave.SaveEditor.Persona3.ViewModels;
+using KHSave.SaveEditor.Persona5.ViewModels;
 using KHSave.SaveEditor.ViewModels;
 using KHSave.SaveEditor.Views;
 using System;
 using System.Windows.Controls;
 using Unity;
-using KHSave.LibPersona3.Models;
-using KHSave.SaveEditor.Persona3.ViewModels;
 
 namespace KHSave.SaveEditor.Services
 {
@@ -76,6 +75,7 @@ namespace KHSave.SaveEditor.Services
             {
                 case ContentType.Unload:
                     return;
+
                 case ContentType.KingdomHearts:
                 case ContentType.KingdomHearts2:
                 case ContentType.KingdomHeartsRecom:
@@ -83,19 +83,27 @@ namespace KHSave.SaveEditor.Services
                 case ContentType.KingdomHearts3:
                     iconPack = IconService.IconPack.KingdomHearts2;
                     break;
+
                 case ContentType.KingdomHeartsBbs:
                     iconPack = IconService.IconPack.KingdomHeartsBbs;
                     break;
+
                 case ContentType.KingdomHeartsDDD:
                     iconPack = IconService.IconPack.KingdomHeartsDdd;
                     break;
+
                 case ContentType.FinalFantasy7Remake:
                     iconPack = IconService.IconPack.FF7Remake;
                     break;
-                case ContentType.Persona3:
+
                 case ContentType.Persona5:
                     iconPack = IconService.IconPack.Persona5;
                     break;
+
+                case ContentType.Persona3:
+                    iconPack = IconService.IconPack.Persona5;
+                    break;
+
                 default:
                     throw new Exception($"IconPack for {saveType} not yet implemented.");
             }

@@ -38,6 +38,5 @@ namespace KHSave.Lib1.Models
         [Data(0x71)] public byte Unk71 { get; set; }
         [Data(0x72)] public byte Unk72 { get; set; }
         [Data(0x73)] public byte Unk73 { get; set; }
-
     }
 }

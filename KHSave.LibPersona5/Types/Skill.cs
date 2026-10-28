@@ -4,71 +4,121 @@ namespace KHSave.LibPersona5.Types
 {
     public class SkillAttribute : InfoAttribute
     {
-        public SkillAttribute(string name = null) : base(name) { }
+        public SkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class HitSkillAttribute : SkillAttribute
     {
-        public HitSkillAttribute(string name = null) : base(name) { }
+        public HitSkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class GunSkillAttribute : SkillAttribute
     {
-        public GunSkillAttribute(string name = null) : base(name) { }
+        public GunSkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class FireSkillAttribute : SkillAttribute
     {
-        public FireSkillAttribute(string name = null) : base(name) { }
+        public FireSkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class IceSkillAttribute : SkillAttribute
     {
-        public IceSkillAttribute(string name = null) : base(name) { }
+        public IceSkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class WindSkillAttribute : SkillAttribute
     {
-        public WindSkillAttribute(string name = null) : base(name) { }
+        public WindSkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class ThunderSkillAttribute : SkillAttribute
     {
-        public ThunderSkillAttribute(string name = null) : base(name) { }
+        public ThunderSkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class BlessSkillAttribute : SkillAttribute
     {
-        public BlessSkillAttribute(string name = null) : base(name) { }
+        public BlessSkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class DeathSkillAttribute : SkillAttribute
     {
-        public DeathSkillAttribute(string name = null) : base(name) { }
+        public DeathSkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class AlmightySkillAttribute : SkillAttribute
     {
-        public AlmightySkillAttribute(string name = null) : base(name) { }
+        public AlmightySkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class NuclearSkillAttribute : SkillAttribute
     {
-        public NuclearSkillAttribute(string name = null) : base(name) { }
+        public NuclearSkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class PsychoSkillAttribute : SkillAttribute
     {
-        public PsychoSkillAttribute(string name = null) : base(name) { }
+        public PsychoSkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class SupportSkillAttribute : SkillAttribute
     {
-        public SupportSkillAttribute(string name = null) : base(name) { }
+        public SupportSkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class AutoSkillAttribute : SkillAttribute
     {
-        public AutoSkillAttribute(string name = null) : base(name) { }
+        public AutoSkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class PoisonSkillAttribute : SkillAttribute
     {
-        public PoisonSkillAttribute(string name = null) : base(name) { }
+        public PoisonSkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class HealSkillAttribute : SkillAttribute
     {
-        public HealSkillAttribute(string name = null) : base(name) { }
+        public HealSkillAttribute(string name = null) : base(name)
+        {
+        }
     }
+
     public class SpecialSkillAttribute : SkillAttribute
     {
-        public SpecialSkillAttribute(string name = null) : base(name) { }
+        public SpecialSkillAttribute(string name = null) : base(name)
+        {
+        }
     }
 
     public enum Skill : short

@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Windows;
 
 namespace KHSave.SaveEditor.Services
 {
@@ -17,9 +16,11 @@ namespace KHSave.SaveEditor.Services
         };
 
         private static readonly Assembly _assembly = Assembly.GetExecutingAssembly();
+
         private static readonly string _assemblyLocation = Path
             .Combine(AppContext.BaseDirectory, _assembly.ManifestModule.ToString())
                 .Replace(".dll", ".exe");
+
         private static readonly FileVersionInfo _fvi = FileVersionInfo.GetVersionInfo(_assemblyLocation);
 
         public DesktopAppIdentity()

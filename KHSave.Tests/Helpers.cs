@@ -47,7 +47,7 @@ namespace KHSave.Tests
         {
             var data = new byte[stream.Length];
             stream.Position = 0;
-            stream.Read(data, 0, data.Length);
+            stream.ReadExactly(data);
             stream.Position = 0;
 
             return data;

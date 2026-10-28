@@ -1,13 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows;
 using KHSave.LibRecom;
 using KHSave.LibRecom.Models;
 using KHSave.LibRecom.Types;
 using KHSave.SaveEditor.Common.Models;
 using KHSave.SaveEditor.KhRecom.Interfaces;
-using KHSave.SaveEditor.KhRecom.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows;
 
 namespace KHSave.SaveEditor.KhRecom.ViewModels
 {
@@ -18,13 +17,11 @@ namespace KHSave.SaveEditor.KhRecom.ViewModels
         public CardInventoryViewModel(DataRecom save, ICardCountService cardCountService) :
             this(GetEntries(save, cardCountService))
         {
-
         }
 
         public CardInventoryViewModel(IEnumerable<CardInventoryEntryViewModel> cards) :
             this(cards, () => CardType.Empty, _ => { })
         {
-
         }
 
         public CardInventoryViewModel(

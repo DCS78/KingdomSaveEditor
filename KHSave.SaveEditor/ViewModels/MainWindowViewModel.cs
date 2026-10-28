@@ -16,36 +16,36 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+using KHSave.Archives;
+using KHSave.Lib1;
+using KHSave.Lib2;
+using KHSave.Lib3;
+using KHSave.LibBbs;
+using KHSave.LibDDD;
+using KHSave.LibFf7Remake;
+using KHSave.LibPersona3;
+using KHSave.LibPersona5;
+using KHSave.LibRecom;
+using KHSave.SaveEditor.Common;
+using KHSave.SaveEditor.Common.Contracts;
+using KHSave.SaveEditor.Common.Exceptions;
+using KHSave.SaveEditor.Common.Services;
+using KHSave.SaveEditor.Common.Views;
+using KHSave.SaveEditor.Interfaces;
+using KHSave.SaveEditor.Services;
+using KHSave.SaveEditor.Views;
+using KHSave.Trssv;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using Xe.Tools;
 using Xe.Tools.Wpf.Commands;
-using KHSave.SaveEditor.Common;
-using KHSave.SaveEditor.Common.Contracts;
-using KHSave.Trssv;
-using KHSave.Lib2;
-using KHSave.LibRecom;
-using KHSave.SaveEditor.Common.Exceptions;
-using KHSave.Archives;
-using KHSave.SaveEditor.Common.Views;
-using KHSave.SaveEditor.Common.Services;
-using KHSave.SaveEditor.Interfaces;
-using System;
-using KHSave.SaveEditor.Services;
-using System.Windows.Controls;
-using KHSave.Lib3;
-using KHSave.LibFf7Remake;
-using KHSave.Lib1;
-using KHSave.LibBbs;
-using KHSave.LibDDD;
-using KHSave.SaveEditor.Views;
-using KHSave.LibPersona5;
-using System.Net.Http;
-using System.Net;
-using KHSave.LibPersona3;
 
 namespace KHSave.SaveEditor.ViewModels
 {
@@ -224,6 +224,7 @@ namespace KHSave.SaveEditor.ViewModels
                             case TransferService.Result.Success:
                                 RefreshUi.RefreshUi();
                                 break;
+
                             case TransferService.Result.GameNotSupported:
                                 throw new Exception("The game you decided to operate with is NOT within the supported game list that supports import transfer.");
                             case TransferService.Result.SourceNotCompatible:
@@ -276,6 +277,7 @@ namespace KHSave.SaveEditor.ViewModels
             {
                 case ContentType.KingdomHearts2:
                     return true;
+
                 default:
                     return false;
             }
@@ -410,14 +412,23 @@ namespace KHSave.SaveEditor.ViewModels
         }
 
         public bool TryOpenKh1(Stream stream) => TryOpen(SaveKh1.IsValid, stream, ContentType.KingdomHearts);
+
         public bool TryOpenKh2(Stream stream) => TryOpen(SaveKh2.IsValid, stream, ContentType.KingdomHearts2);
+
         public bool TryOpenKhBbs(Stream stream) => TryOpen(SaveKhBbs.IsValid, stream, ContentType.KingdomHeartsBbs);
+
         public bool TryOpenKhDDD(Stream stream) => TryOpen(SaveKhDDD.IsValid, stream, ContentType.KingdomHeartsDDD);
+
         public bool TryOpenKhRecom(Stream stream) => TryOpen(SaveKhRecom.IsValid, stream, ContentType.KingdomHeartsRecom);
+
         public bool TryOpenKh02(Stream stream) => TryOpen(SaveKh02.IsValid, stream, ContentType.KingdomHearts02);
+
         public bool TryOpenKh3(Stream stream) => TryOpen(SaveKh3.IsValid, stream, ContentType.KingdomHearts3);
+
         public bool TryOpenFF7Remake(Stream stream) => TryOpen(SaveFf7Remake.IsValid, stream, ContentType.FinalFantasy7Remake);
+
         public bool TryOpenPersona3(Stream stream) => TryOpen(SavePersona3.IsValid, stream, ContentType.Persona3);
+
         public bool TryOpenPersona5(Stream stream) => TryOpen(SavePersona5.IsValid, stream, ContentType.Persona5);
 
         public bool TryOpen(Func<Stream, bool> prediate, Stream stream, ContentType contentType)

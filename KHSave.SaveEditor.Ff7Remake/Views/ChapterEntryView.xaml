@@ -1,40 +1,40 @@
-﻿<UserControl x:Class="KHSave.SaveEditor.Ff7Remake.Views.ChapterEntryView"
+<UserControl x:Class="KHSave.SaveEditor.Ff7Remake.Views.ChapterEntryView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:KHSave.SaveEditor.Ff7Remake.Views"
              xmlns:common="clr-namespace:KHSave.SaveEditor.Common.Controls;assembly=KHSave.SaveEditor.Common"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="900" d:DesignWidth="300">
     <Grid>
         <TextBlock
             Visibility="{Binding ChapterDisabledVisibility}"
-            Text="This chapter does not contain any data"/>
+            Text="This chapter does not contain any data" />
         <Grid Visibility="{Binding ChapterVisibility}">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel Visibility="{Binding SimpleVisibility}">
-                    <local:ChapterMainView DataContext="{Binding}"/>
-                    <local:ChapterPlayableView DataContext="{Binding}"/>
+                    <local:ChapterMainView DataContext="{Binding}" />
+                    <local:ChapterPlayableView DataContext="{Binding}" />
                 </StackPanel>
             </ScrollViewer>
             <TabControl Visibility="{Binding AdvancedVisibility}">
                 <TabItem Header="Main">
-                    <local:ChapterMainView DataContext="{Binding}"/>
+                    <local:ChapterMainView DataContext="{Binding}" />
                 </TabItem>
                 <TabItem Header="Playable">
                     <StackPanel>
-                        <local:ChapterPlayableView DataContext="{Binding}"/>
+                        <local:ChapterPlayableView DataContext="{Binding}" />
                     </StackPanel>
                 </TabItem>
                 <TabItem Header="NPC">
-                    <local:ChapterObjectsView DataContext="{Binding Objects}"/>
+                    <local:ChapterObjectsView DataContext="{Binding Objects}" />
                 </TabItem>
                 <TabItem Header="Objects">
-                    <local:ChapterObjectsView DataContext="{Binding Objects2}"/>
+                    <local:ChapterObjectsView DataContext="{Binding Objects2}" />
                 </TabItem>
                 <TabItem Header="Enemies">
-                    <local:ChapterObjectsView DataContext="{Binding Objects3}"/>
+                    <local:ChapterObjectsView DataContext="{Binding Objects3}" />
                 </TabItem>
             </TabControl>
         </Grid>

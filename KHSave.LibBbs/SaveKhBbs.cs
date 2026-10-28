@@ -30,6 +30,7 @@ namespace KHSave.LibBbs
                 case GameVersion.AmericanEuropean:
                 case GameVersion.FinalMix:
                     return (GameVersion)version;
+
                 default:
                     return null;
             }
@@ -52,7 +53,6 @@ namespace KHSave.LibBbs
             save.Checksum = checksum;
             BinaryMapping.WriteObject(stream.FromBegin(), save);
         }
-
 
         public static uint CalculateChecksum(Stream stream)
         {

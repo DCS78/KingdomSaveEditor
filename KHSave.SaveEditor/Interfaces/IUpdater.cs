@@ -7,6 +7,7 @@ namespace KHSave.SaveEditor.Interfaces
         bool IsAutomaticUpdatesEnabled { get; set; }
 
         Task<bool> AutomaticallyCheckLastVersionAsync();
+
         Task<bool> ForceCheckLastVersionAsync();
     }
 }

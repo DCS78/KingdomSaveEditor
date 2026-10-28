@@ -1,35 +1,35 @@
-﻿<UserControl x:Class="KHSave.SaveEditor.Kh02.MainView"
+<UserControl x:Class="KHSave.SaveEditor.Kh02.MainView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:KHSave.SaveEditor.Kh02"
              xmlns:views="clr-namespace:KHSave.SaveEditor.Kh02.Views"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="350" d:DesignWidth="400">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Column="0" Margin="3" VerticalAlignment="Center"
-                Text="Slot"/>
+                Text="Slot" />
             <ComboBox Grid.Column="1" Margin="3"
                 ItemsSource="{Binding Slots.Items}"
                 SelectedValue="{Binding SelectedSlot}"
                 SelectedValuePath="Value"
-                DisplayMemberPath="Name"/>
+                DisplayMemberPath="Name" />
             <Button Grid.Column="2" Margin="3"
                 Visibility="Hidden"
-                Content="Settings"/>
+                Content="Settings" />
         </Grid>
 
         <Grid Grid.Row="1" IsEnabled="{Binding IsSlotSelected}">
@@ -37,7 +37,7 @@
                 <TabItem Header="System">
                     <views:SystemView
                     Grid.Row="1"
-                    DataContext="{Binding}"/>
+                    DataContext="{Binding}" />
                 </TabItem>
             </TabControl>
         </Grid>

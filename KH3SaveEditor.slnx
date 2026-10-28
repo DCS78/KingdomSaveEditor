@@ -1,0 +1,116 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="ARM" />
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Applications/" />
+  <Folder Name="/Applications/Main Editor/">
+    <Project Path="KHSave.SaveEditor/KHSave.SaveEditor.csproj" />
+  </Folder>
+  <Folder Name="/Documentation/">
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/Infrastructure/" />
+  <Folder Name="/Infrastructure/Archives/">
+    <Project Path="KHSave.Archives/KHSave.Archives.csproj" />
+  </Folder>
+  <Folder Name="/Kingdom Hearts/" />
+  <Folder Name="/Kingdom Hearts/0.2/">
+    <Project Path="KHSave.Lib02/KHSave.Lib02.csproj" />
+    <Project Path="KHSave.SaveEditor.Kh02/KHSave.SaveEditor.Kh02.csproj" />
+  </Folder>
+  <Folder Name="/Kingdom Hearts/Birth by Sleep/">
+    <Project Path="KHSave.LibBbs/KHSave.LibBbs.csproj" />
+    <Project Path="KHSave.SaveEditor.KhBbs/KHSave.SaveEditor.KhBbs.csproj" />
+  </Folder>
+  <Folder Name="/Kingdom Hearts/Chain of Memories/">
+    <Project Path="KHSave.LibRecom/KHSave.LibRecom.csproj" />
+    <Project Path="KHSave.SaveEditor.KhRecom/KHSave.SaveEditor.KhRecom.csproj" />
+  </Folder>
+  <Folder Name="/Kingdom Hearts/Dream Drop Distance/">
+    <Project Path="KHSave.LibDDD/KHSave.LibDDD.csproj" />
+    <Project Path="KHSave.SaveEditor.KhDDD/KHSave.SaveEditor.KhDDD.csproj" />
+  </Folder>
+  <Folder Name="/Kingdom Hearts/Kingdom Hearts I/">
+    <Project Path="KHSave.Lib1/KHSave.Lib1.csproj" />
+    <Project Path="KHSave.SaveEditor.Kh1/KHSave.SaveEditor.Kh1.csproj" />
+  </Folder>
+  <Folder Name="/Kingdom Hearts/Kingdom Hearts II/">
+    <Project Path="KHSave.Lib2/KHSave.Lib2.csproj" />
+    <Project Path="KHSave.SaveEditor.Kh2/KHSave.SaveEditor.Kh2.csproj" />
+  </Folder>
+  <Folder Name="/Kingdom Hearts/Kingdom Hearts III/">
+    <Project Path="KHSave.Lib3/KHSave.Lib3.csproj" />
+    <Project Path="KHSave.SaveEditor.Kh3/KHSave.SaveEditor.Kh3.csproj" />
+  </Folder>
+  <Folder Name="/Kingdom Hearts/Shared/">
+    <Project Path="KHSave.SaveEditor.Common/KHSave.SaveEditor.Common.csproj" />
+    <Project Path="KHSave/KHSave.csproj" />
+  </Folder>
+  <Folder Name="/Other Games/" />
+  <Folder Name="/Other Games/Persona 3/">
+    <Project Path="KHSave.LibPersona3/KHSave.LibPersona3.csproj" />
+    <Project Path="KHSave.SaveEditor.Persona3/KHSave.SaveEditor.Persona3.csproj" />
+  </Folder>
+  <Folder Name="/Other Games/Final Fantasy VII Remake/">
+    <Project Path="KHSave.LibFf7Remake/KHSave.LibFf7Remake.csproj" />
+    <Project Path="KHSave.SaveEditor.Ff7Remake/KHSave.SaveEditor.Ff7Remake.csproj" />
+  </Folder>
+  <Folder Name="/Other Games/Persona 5/">
+    <Project Path="KHSave.LibPersona5/KHSave.LibPersona5.csproj" />
+    <Project Path="KHSave.SaveEditor.Persona5/KHSave.SaveEditor.Persona5.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="KHSave.Tests/KHSave.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Tools/" />
+  <Folder Name="/Tools/Memory Watcher/">
+    <Project Path="Tooling.MemoryWatcher/Tooling.MemoryWatcher.csproj" />
+  </Folder>
+  <Folder Name="/Xe.ReleaseUpdater/">
+    <Project Path="Xe.ReleaseUpdater/Xe.Http/Xe.Http.csproj" />
+    <Project Path="Xe.ReleaseUpdater/Xe.VersionCheck.Tests/Xe.VersionCheck.Tests.csproj" />
+    <Project Path="Xe.ReleaseUpdater/Xe.VersionCheck/Xe.VersionCheck.csproj">
+      <Build Solution="*|ARM" Project="false" />
+      <Build Solution="*|ARM64" Project="false" />
+      <Build Solution="*|x64" Project="false" />
+      <Build Solution="*|x86" Project="false" />
+    </Project>
+  </Folder>
+  <Folder Name="/XeEngine.Tools.Public/">
+    <Project Path="XeEngine.Tools.Public/Xe.Drawing/Xe.Drawing.csproj">
+      <Build Solution="*|ARM" Project="false" />
+      <Build Solution="*|ARM64" Project="false" />
+      <Build Solution="*|x64" Project="false" />
+      <Build Solution="*|x86" Project="false" />
+    </Project>
+    <Project Path="XeEngine.Tools.Public/Xe.Tools.Wpf/Xe.Tools.Wpf.csproj">
+      <Build Solution="*|ARM" Project="false" />
+      <Build Solution="*|ARM64" Project="false" />
+      <Build Solution="*|x64" Project="false" />
+      <Build Solution="*|x86" Project="false" />
+    </Project>
+    <Project Path="XeEngine.Tools.Public/Xe.Tools/Xe.Tools.csproj">
+      <Build Solution="*|ARM" Project="false" />
+      <Build Solution="*|ARM64" Project="false" />
+      <Build Solution="*|x64" Project="false" />
+      <Build Solution="*|x86" Project="false" />
+    </Project>
+    <Project Path="XeEngine.Tools.Public/Xe/Xe.csproj">
+      <Build Solution="*|ARM" Project="false" />
+      <Build Solution="*|ARM64" Project="false" />
+      <Build Solution="*|x64" Project="false" />
+      <Build Solution="*|x86" Project="false" />
+    </Project>
+  </Folder>
+
+  <Project Path="WindowsStoreSubmission/WindowsStoreSubmission.wapproj" Type="c7167f0d-bc9f-4e6e-afe1-012c56b48db5">
+    <Deploy />
+  </Project>
+</Solution>

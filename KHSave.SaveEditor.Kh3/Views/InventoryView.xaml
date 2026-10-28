@@ -1,23 +1,23 @@
-﻿<UserControl x:Class="KHSave.SaveEditor.Kh3.Views.InventoryView"
+<UserControl x:Class="KHSave.SaveEditor.Kh3.Views.InventoryView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:KHSave.SaveEditor.Kh3.Views"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="10" />
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <ListBox
                 Grid.Row="0"
@@ -39,48 +39,48 @@
                     <DataTemplate>
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <Image Grid.Column="0" Margin="0 0 3 0" Width="16" Height="16"
-                               Source="{Binding Icon}"/>
+                               Source="{Binding Icon}" />
                             <TextBlock Grid.Column="1" Text="{Binding Name}" />
                             <TextBlock Grid.Column="2" Margin="0 0 5 0" Text="{Binding Count, StringFormat=x{0:D02}}" />
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            
+
             <Grid Grid.Row="1" Margin="0 5 0 5">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Source="{StaticResource Search_16x}"/>
-                <TextBox Grid.Column="2" Text="{Binding SearchTerm, UpdateSourceTrigger=PropertyChanged}"/>
+                <Image Grid.Column="0" Source="{StaticResource Search_16x}" />
+                <TextBox Grid.Column="2" Text="{Binding SearchTerm, UpdateSourceTrigger=PropertyChanged}" />
             </Grid>
         </Grid>
 
         <StackPanel Grid.Column="2" IsEnabled="{Binding IsItemSelected}">
-            <TextBlock Text="Item count"/>
-            <TextBox Margin="0 0 0 5" Text="{Binding SelectedItemCount, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock Text="Item count" />
+            <TextBox Margin="0 0 0 5" Text="{Binding SelectedItemCount, UpdateSourceTrigger=PropertyChanged}" />
 
-            <TextBlock Text="Flags"/>
-            <CheckBox Content="Obtained" IsChecked="{Binding SelectedItemFlagObtained}"/>
-            <CheckBox Content="Unseen" IsChecked="{Binding SelectedItemFlagUnseen}"/>
-            <CheckBox Content="Shop seen" IsChecked="{Binding SelectedItemFlagShop}"/>
-            
+            <TextBlock Text="Flags" />
+            <CheckBox Content="Obtained" IsChecked="{Binding SelectedItemFlagObtained}" />
+            <CheckBox Content="Unseen" IsChecked="{Binding SelectedItemFlagUnseen}" />
+            <CheckBox Content="Shop seen" IsChecked="{Binding SelectedItemFlagShop}" />
+
             <StackPanel Visibility="{Binding AdvancedVisibility}">
                 <CheckBox Margin="10 0 0 0"
-                    Content="Seen in shop" IsChecked="{Binding SelectedItemFlag2}"/>
+                    Content="Seen in shop" IsChecked="{Binding SelectedItemFlag2}" />
                 <CheckBox Margin="10 0 0 0"
-                    Content="Shop flag 2" IsChecked="{Binding SelectedItemFlag3}"/>
-                <CheckBox Content="Flag 4" IsChecked="{Binding SelectedItemFlag4}"/>
-                <CheckBox Content="Flag 5" IsChecked="{Binding SelectedItemFlag5}"/>
-                <CheckBox Content="Flag 6" IsChecked="{Binding SelectedItemFlag6}"/>
-                <CheckBox Content="Flag 7" IsChecked="{Binding SelectedItemFlag7}"/>
+                    Content="Shop flag 2" IsChecked="{Binding SelectedItemFlag3}" />
+                <CheckBox Content="Flag 4" IsChecked="{Binding SelectedItemFlag4}" />
+                <CheckBox Content="Flag 5" IsChecked="{Binding SelectedItemFlag5}" />
+                <CheckBox Content="Flag 6" IsChecked="{Binding SelectedItemFlag6}" />
+                <CheckBox Content="Flag 7" IsChecked="{Binding SelectedItemFlag7}" />
             </StackPanel>
         </StackPanel>
     </Grid>

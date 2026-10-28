@@ -104,6 +104,7 @@ namespace KHSave.SaveEditor.Ff7Remake.Data
             Name = $"{(int)type}",
             Icon = null
         };
+
         public static IEnumerable<ItemProperty> GetAll() =>
             _data.Values.OrderBy(x => x.Id);
 

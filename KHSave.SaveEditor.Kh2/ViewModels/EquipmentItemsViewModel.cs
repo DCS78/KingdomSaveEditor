@@ -48,7 +48,6 @@ namespace KHSave.SaveEditor.Kh2.ViewModels
             }
         }
 
-
         public EquipmentItemsViewModel(IEquipmentManager equipmentManager, IResourceGetter resourceGetter)
         {
             this.equipmentManager = equipmentManager;
@@ -72,6 +71,7 @@ namespace KHSave.SaveEditor.Kh2.ViewModels
         public EquipmentItemViewModel Equipment8 { get; private set; }
 
         public bool IsEnabled(uint index) => equipmentManager.Count > index;
+
         public void SetEnabled(uint index, bool enabled)
         {
             if (enabled)
@@ -92,7 +92,9 @@ namespace KHSave.SaveEditor.Kh2.ViewModels
             Equipment7.InvalidateEnabled();
             Equipment8.InvalidateEnabled();
         }
+
         public EquipmentType GetEquipment(uint index) => equipmentManager.GetEquipment(index);
+
         public void SetEquipment(uint index, EquipmentType equipment) => equipmentManager.SetEquipment(index, equipment);
     }
 }

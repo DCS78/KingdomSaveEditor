@@ -46,6 +46,7 @@ namespace KHSave.Archives
             public byte[] Data { get; set; }
 
             private static DateTime Map(int ticks) => new DateTime(ticks * TimeSpan.TicksPerSecond + UnixTimeBase);
+
             private static int Map(DateTime dateTime) => (int)((dateTime.Ticks - UnixTimeBase) / TimeSpan.TicksPerSecond);
         }
 
@@ -71,7 +72,7 @@ namespace KHSave.Archives
             {
                 stream.Position = baseOffset;
                 entry.Data = new byte[entry.Length];
-                stream.Read(entry.Data, 0, (int)entry.Length);
+                stream.ReadExactly(entry.Data);
 
                 baseOffset += _stride;
             }

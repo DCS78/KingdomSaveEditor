@@ -43,7 +43,6 @@ namespace KHSave.SaveEditor.KhDDD.ViewModels
 
         public void OpenStream(Stream stream)
         {
-
             save = SaveKhDDD.Read(stream);
 
             RefreshUi();

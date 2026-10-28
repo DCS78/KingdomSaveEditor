@@ -16,8 +16,8 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-using System;
 using KHSave.Attributes;
+using System;
 
 namespace KHSave.SaveEditor.Common.Models
 {

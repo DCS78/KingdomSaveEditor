@@ -13,114 +13,114 @@
         Title="{Binding Title}" Height="540" Width="580" Loaded="Window_Loaded"
         Drop="Window_Drop" AllowDrop="True">
     <Window.InputBindings>
-        <KeyBinding Key="O" Modifiers="Control" Command="{Binding OpenCommand}"/>
-        <KeyBinding Key="S" Modifiers="Control" Command="{Binding SaveCommand}"/>
-        <KeyBinding Key="S" Modifiers="Control+Shift" Command="{Binding SaveAsCommand}"/>
+        <KeyBinding Key="O" Modifiers="Control" Command="{Binding OpenCommand}" />
+        <KeyBinding Key="S" Modifiers="Control" Command="{Binding SaveCommand}" />
+        <KeyBinding Key="S" Modifiers="Control+Shift" Command="{Binding SaveAsCommand}" />
     </Window.InputBindings>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Menu Grid.Row="0">
             <MenuItem Header="_File">
                 <MenuItem Header="_Open..." Command="{Binding OpenCommand}">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource FolderOpen_16x}"/>
+                        <Image Source="{StaticResource FolderOpen_16x}" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="_Attach to PCSX2..." Command="{Binding OpenPcsx2Command}">
                 </MenuItem>
                 <MenuItem Header="_Save" Command="{Binding SaveCommand}">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource Save_16x}"/>
+                        <Image Source="{StaticResource Save_16x}" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Save _as..." Command="{Binding SaveAsCommand}">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource SaveAs_16x}"/>
+                        <Image Source="{StaticResource SaveAs_16x}" />
                     </MenuItem.Icon>
                 </MenuItem>
-                <Separator/>
+                <Separator />
                 <MenuItem Header="Import from different region/edition..." Command="{Binding ImportCommand}">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource Import_16x}"/>
+                        <Image Source="{StaticResource Import_16x}" />
                     </MenuItem.Icon>
                 </MenuItem>
-                <Separator/>
-                <MenuItem Header="E_xit" Command="{Binding ExitCommand}"/>
+                <Separator />
+                <MenuItem Header="E_xit" Command="{Binding ExitCommand}" />
             </MenuItem>
             <MenuItem Header="_Options">
                 <CheckBox
                     Content="_Advanced mode"
-                    IsChecked="{Binding IsAdvancedMode}"/>
+                    IsChecked="{Binding IsAdvancedMode}" />
                 <CheckBox
                     Content="Automatic _Update check"
-                    IsChecked="{Binding IsUpdateCheckingEnabled}"/>
+                    IsChecked="{Binding IsUpdateCheckingEnabled}" />
                 <CheckBox
                     Content="Anonymous reporting"
-                    IsChecked="{Binding IsAnonymousReporting}"/>
+                    IsChecked="{Binding IsAnonymousReporting}" />
             </MenuItem>
             <MenuItem Header="_Info">
                 <MenuItem IsEnabled="False">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource UIAbout_16x}"/>
+                        <Image Source="{StaticResource UIAbout_16x}" />
                     </MenuItem.Icon>
                     <MenuItem.Header>
                         <TextBlock Foreground="Black">
-                            <Run Text="Version: "/>
-                            <Run Text="{Binding CurrentVersion, Mode=OneTime}"/>
+                            <Run Text="Version: " />
+                            <Run Text="{Binding CurrentVersion, Mode=OneTime}" />
                         </TextBlock>
                     </MenuItem.Header>
                 </MenuItem>
-                <Separator/>
+                <Separator />
                 <MenuItem
                     Header="Get _latest version"
                     Command="{Binding GetLatestVersionCommand}"
                     Visibility="{Binding UpdateVisibility}">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource Download_16x}"/>
+                        <Image Source="{StaticResource Download_16x}" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Go to Home Page" Command="{Binding OpenLinkCommand}"
                     CommandParameter="https://kingdomsaveeditor.xee.dev">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource WebURL_16x}"/>
+                        <Image Source="{StaticResource WebURL_16x}" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Get from Microsoft Store" Command="{Binding OpenLinkCommand}"
                     CommandParameter="https://www.microsoft.com/store/productId/9NV4D090M1XD">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource WebURL_16x}"/>
+                        <Image Source="{StaticResource WebURL_16x}" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Get the Source Code" Command="{Binding OpenLinkCommand}"
                     CommandParameter="https://github.com/Xeeynamo/KingdomSaveEditor">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource WebURL_16x}"/>
+                        <Image Source="{StaticResource WebURL_16x}" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Report bug or missing features" Command="{Binding OpenGitHubIssueLinkCommand}"
                     CommandParameter="https://github.com/Xeeynamo/KingdomSaveEditor/issues">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource WebURL_16x}"/>
+                        <Image Source="{StaticResource WebURL_16x}" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Join Discord server" Command="{Binding OpenLinkCommand}"
                     CommandParameter="https://kse-discord.xee.dev">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource WebURL_16x}"/>
+                        <Image Source="{StaticResource WebURL_16x}" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Read privacy policy" Command="{Binding OpenLinkCommand}"
                     CommandParameter="https://kingdomsaveeditor.xee.dev/#privacy">
                     <MenuItem.Icon>
-                        <Image Source="{StaticResource WebURL_16x}"/>
+                        <Image Source="{StaticResource WebURL_16x}" />
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
         </Menu>
 
-        <Grid x:Name="content" Grid.Row="1" DataContext="{Binding DataContext}"/>
+        <Grid x:Name="content" Grid.Row="1" DataContext="{Binding DataContext}" />
     </Grid>
 </Window>

@@ -4,7 +4,9 @@ namespace KHSave.LibPersona5.Types
 {
     public class ConsumableHpAttribute : ConsumableAttribute
     {
-        public ConsumableHpAttribute(string name = null) : base(name) { }
+        public ConsumableHpAttribute(string name = null) : base(name)
+        {
+        }
     }
 
     public enum Inventory

@@ -17,9 +17,9 @@
 */
 
 using KHSave.Lib3.Models;
+using KHSave.Lib3.Types;
 using KHSave.SaveEditor.Common;
 using KHSave.SaveEditor.Common.Models;
-using KHSave.Lib3.Types;
 using System;
 using System.Windows;
 using Xe.Tools;
@@ -99,30 +99,39 @@ namespace KHSave.SaveEditor.Kh3.Models
                 case KHSave.Lib3.Types.ItemType.ConsumableMirrored:
                     ValueSet = NewList<ConsumableType>();
                     break;
+
                 case KHSave.Lib3.Types.ItemType.Tent:
                     ValueSet = NewList<TentType>();
                     break;
+
                 case KHSave.Lib3.Types.ItemType.Weapon:
                     ValueSet = NewList<WeaponType>();
                     break;
+
                 case KHSave.Lib3.Types.ItemType.Armor:
                     ValueSet = NewList<ArmorType>();
                     break;
+
                 case KHSave.Lib3.Types.ItemType.Accessory:
                     ValueSet = NewList<AccessoryType>();
                     break;
+
                 case KHSave.Lib3.Types.ItemType.Snack:
                     ValueSet = NewList<SnackType>();
                     break;
+
                 case KHSave.Lib3.Types.ItemType.Synthesis:
                     ValueSet = NewList<SynthesisType>();
                     break;
+
                 case KHSave.Lib3.Types.ItemType.Food:
                     ValueSet = NewList<FoodType>();
                     break;
+
                 case KHSave.Lib3.Types.ItemType.KeyItem:
                     ValueSet = NewList<KeyItemType>();
                     break;
+
                 default:
                     ValueSet = null;
                     break;

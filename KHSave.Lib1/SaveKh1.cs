@@ -6,7 +6,6 @@ namespace KHSave.Lib1
 {
     public partial class SaveKh1
     {
-
         internal static IBinaryMapping Mapper;
 
         static SaveKh1()
@@ -31,6 +30,7 @@ namespace KHSave.Lib1
                 case Constants.MagicCodeFm:
                 case Constants.MagicCodeEverythingElse:
                     return true;
+
                 default:
                     return false;
             }
@@ -59,8 +59,10 @@ namespace KHSave.Lib1
             {
                 case Constants.MagicCodeFm:
                     return Read<SaveFinalMix>(stream);
+
                 case Constants.MagicCodeEverythingElse:
                     return Read<SaveEU>(stream);
+
                 default:
                     throw new NotSupportedException("The version is not supported.");
             }

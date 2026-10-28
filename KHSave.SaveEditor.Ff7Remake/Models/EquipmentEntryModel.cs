@@ -88,30 +88,38 @@ namespace KHSave.SaveEditor.Ff7Remake.Models
                     case CharacterType.Cloud:
                         iconName = "WeaponCloud";
                         break;
+
                     case CharacterType.Barret:
                         iconName = "WeaponBarret";
                         break;
+
                     case CharacterType.Tifa:
                         iconName = "WeaponTifa";
                         break;
+
                     case CharacterType.Aerith:
                         iconName = "WeaponAerith";
                         break;
+
                     case CharacterType.Red13:
                         iconName = "Weapon";
                         break;
+
                     case CharacterType.Yuffie:
                         iconName = "WeaponYuffie";
                         break;
+
                     case CharacterType.Sonon:
                         iconName = "WeaponSonon";
                         break;
+
                     case CharacterType.None:
                         if (ItemId > 0)
                             iconName = ItemsPreset.Get(ItemId)?.Icon;
                         else
                             iconName = null;
                         break;
+
                     default:
                         iconName = null;
                         break;

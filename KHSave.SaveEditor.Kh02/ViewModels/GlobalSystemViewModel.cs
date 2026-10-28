@@ -43,4 +43,3 @@ namespace KHSave.SaveEditor.Kh02.ViewModels
         public int TheaterMode { get => save.TheaterMode; set => save.TheaterMode = value; }
     }
 }
-

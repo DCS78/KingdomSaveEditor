@@ -16,15 +16,15 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-using System.Collections.Generic;
-using System.Linq;
 using KHSave.Attributes;
 using KHSave.Lib3.Models;
 using KHSave.Lib3.Types;
-using Xe.Tools.Wpf.Models;
-using KHSave.SaveEditor.Common.Models;
-using System.Windows;
 using KHSave.SaveEditor.Common;
+using KHSave.SaveEditor.Common.Models;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows;
+using Xe.Tools.Wpf.Models;
 
 namespace KHSave.SaveEditor.Kh3.ViewModels
 {
@@ -39,11 +39,11 @@ namespace KHSave.SaveEditor.Kh3.ViewModels
         public AbilitiesViewModel(IEnumerable<AbilityEntryViewModel> list)
             : base(list)
         {
-
         }
 
         public Visibility SimpleVisibility => Global.IsAdvancedMode ? Visibility.Collapsed : Visibility.Visible;
         public Visibility AdvancedVisibility => Global.IsAdvancedMode ? Visibility.Visible : Visibility.Collapsed;
+
         protected override AbilityEntryViewModel OnNewItem()
         {
             throw new System.NotImplementedException();

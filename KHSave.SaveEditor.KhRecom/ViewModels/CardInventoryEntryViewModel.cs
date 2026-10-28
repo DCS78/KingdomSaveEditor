@@ -43,12 +43,12 @@ namespace KHSave.SaveEditor.KhRecom.ViewModels
 
         public Visibility MultipleValueGroupVisibility =>
             CanHaveMultipleValues ? Visibility.Visible : Visibility.Collapsed;
+
         public Visibility SingleValueVisibility =>
             !CanHaveMultipleValues ? Visibility.Visible : Visibility.Collapsed;
 
         private string GetTotalFromIndexed() =>
             $"{CountValue0} {CountValue1} {CountValue2} {CountValue3} {CountValue4} {CountValue5} {CountValue6} {CountValue7} {CountValue8} {CountValue9}";
-
 
         private byte GetCount(CardIndex index)
         {

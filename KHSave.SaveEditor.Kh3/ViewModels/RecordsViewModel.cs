@@ -16,11 +16,11 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-using System.Collections.Generic;
-using KHSave.Lib3.Types;
-using KHSave.SaveEditor.Kh3.Models;
 using KHSave.Extensions;
 using KHSave.Lib3;
+using KHSave.Lib3.Types;
+using KHSave.SaveEditor.Kh3.Models;
+using System.Collections.Generic;
 
 namespace KHSave.SaveEditor.Kh3.ViewModels
 {
@@ -49,46 +49,55 @@ namespace KHSave.SaveEditor.Kh3.ViewModels
             get => save.Records.FrozenSliderMedals.GetFlag(0);
             set => save.Records.FrozenSliderMedals = save.Records.FrozenSliderMedals.SetFlag(0, value);
         }
+
         public bool FrozenSliderMedal2
         {
             get => save.Records.FrozenSliderMedals.GetFlag(1);
             set => save.Records.FrozenSliderMedals = save.Records.FrozenSliderMedals.SetFlag(1, value);
         }
+
         public bool FrozenSliderMedal3
         {
             get => save.Records.FrozenSliderMedals.GetFlag(2);
             set => save.Records.FrozenSliderMedals = save.Records.FrozenSliderMedals.SetFlag(2, value);
         }
+
         public bool FrozenSliderMedal4
         {
             get => save.Records.FrozenSliderMedals.GetFlag(3);
             set => save.Records.FrozenSliderMedals = save.Records.FrozenSliderMedals.SetFlag(3, value);
         }
+
         public bool FrozenSliderMedal5
         {
             get => save.Records.FrozenSliderMedals.GetFlag(4);
             set => save.Records.FrozenSliderMedals = save.Records.FrozenSliderMedals.SetFlag(4, value);
         }
+
         public bool FrozenSliderMedal6
         {
             get => save.Records.FrozenSliderMedals.GetFlag(5);
             set => save.Records.FrozenSliderMedals = save.Records.FrozenSliderMedals.SetFlag(5, value);
         }
+
         public bool FrozenSliderMedal7
         {
             get => save.Records.FrozenSliderMedals.GetFlag(6);
             set => save.Records.FrozenSliderMedals = save.Records.FrozenSliderMedals.SetFlag(6, value);
         }
+
         public bool FrozenSliderMedal8
         {
             get => save.Records.FrozenSliderMedals.GetFlag(7);
             set => save.Records.FrozenSliderMedals = save.Records.FrozenSliderMedals.SetFlag(7, value);
         }
+
         public bool FrozenSliderMedal9
         {
             get => save.Records.FrozenSliderMedals.GetFlag(8);
             set => save.Records.FrozenSliderMedals = save.Records.FrozenSliderMedals.SetFlag(8, value);
         }
+
         public bool FrozenSliderMedal10
         {
             get => save.Records.FrozenSliderMedals.GetFlag(9);

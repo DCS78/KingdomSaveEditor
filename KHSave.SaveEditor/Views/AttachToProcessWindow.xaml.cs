@@ -43,7 +43,6 @@ namespace KHSave.SaveEditor.Views
 
                     // If the search ends, ask to close the current window dialog
                     Application.Current.Dispatcher.Invoke(() => Close());
-
                 }, cancellationTokenSource.Token);
 
                 ShowDialog();

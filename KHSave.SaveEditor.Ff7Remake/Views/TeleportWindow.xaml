@@ -1,4 +1,4 @@
-﻿<Window x:Class="KHSave.SaveEditor.Ff7Remake.Views.TeleportWindow"
+<Window x:Class="KHSave.SaveEditor.Ff7Remake.Views.TeleportWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -13,26 +13,26 @@
     </Window.Resources>
     <Grid Margin="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="5"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="5"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="22"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="22" />
         </Grid.RowDefinitions>
 
         <StackPanel>
-            <TextBlock Grid.Row="0" Text="Please select a location you want teleport to."/>
+            <TextBlock Grid.Row="0" Text="Please select a location you want teleport to." />
             <TextBlock TextWrapping="Wrap">
-                You can 
+                You can
                 <Hyperlink Foreground="{StaticResource textHyperlink}"
                     NavigateUri="{Binding AddLocationRequestUrl, Mode=OneWay}"
                     RequestNavigate="Hyperlink_RequestNavigate"
                     TextDecorations="{x:Null}">
                     request to add your location location
                 </Hyperlink>
-                  by specifying chapter location and coodinates, or you can 
+                  by specifying chapter location and coodinates, or you can
                 <Hyperlink Foreground="{StaticResource textHyperlink}"
                     NavigateUri="{Binding SourceCodeUrl, Mode=OneWay}"
                     RequestNavigate="Hyperlink_RequestNavigate"
@@ -42,9 +42,9 @@
                 to be integrated in the next version of the editor!
             </TextBlock>
         </StackPanel>
-        <TextBlock Grid.Row="4" Text="{Binding FetchStatusText}"/>
+        <TextBlock Grid.Row="4" Text="{Binding FetchStatusText}" />
         <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="_Cancel" Width="75" Margin="0,0,10,0" IsCancel="True"/>
+            <Button Content="_Cancel" Width="75" Margin="0,0,10,0" IsCancel="True" />
             <Button Content="_Ok" Width="75" IsDefault="True" Command="{Binding OkCommand}" />
         </StackPanel>
 
@@ -62,10 +62,10 @@
                 </Style>
             </DataGrid.RowStyle>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Chapter" Width="Auto" Binding="{Binding Chapter}"/>
-                <DataGridCheckBoxColumn Header="OOB" Width="Auto" Binding="{Binding IsOutOfBounds, Mode=OneWay}"/>
-                <DataGridTextColumn Header="Description" Width="*" Binding="{Binding Description}"/>
-                <DataGridTextColumn Header="Coordinates" Width="Auto" Binding="{Binding Coordinates}"/>
+                <DataGridTextColumn Header="Chapter" Width="Auto" Binding="{Binding Chapter}" />
+                <DataGridCheckBoxColumn Header="OOB" Width="Auto" Binding="{Binding IsOutOfBounds, Mode=OneWay}" />
+                <DataGridTextColumn Header="Description" Width="*" Binding="{Binding Description}" />
+                <DataGridTextColumn Header="Coordinates" Width="Auto" Binding="{Binding Coordinates}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

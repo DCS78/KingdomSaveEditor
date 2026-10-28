@@ -39,6 +39,7 @@ namespace KHSave.SaveEditor.Ff7Remake.ViewModels
 
         public IEnumerable<string> Items => _save.ChunkCommon.CharactersUnknown
             .Select((_, i) => InfoAttribute.GetInfo((CharacterType)i));
+
         public bool IsItemSelected => SelectedIndex >= 0;
         public Visibility EntryVisible => IsItemSelected ? Visibility.Visible : Visibility.Collapsed;
         public Visibility EntryNotVisible => !IsItemSelected ? Visibility.Visible : Visibility.Collapsed;
